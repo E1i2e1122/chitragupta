@@ -3,14 +3,12 @@ import { Button, DatePicker, Form, Select } from "antd";
 import dayjs from "dayjs";
 import { useFilterOptions } from "../../hooks/useFilterOptions";
 import type { ChargebackFilters } from "../../types/filters";
+import { filterByLabel } from "../../utils/filterHelpers";
 
 const COST_TYPE_OPTIONS = [
   { label: "Usage", value: "usage" },
   { label: "Shared", value: "shared" },
 ];
-
-export const filterByLabel = (input: string, option?: { label?: unknown }) =>
-  String(option?.label ?? "").toLowerCase().includes(input.toLowerCase());
 
 interface FilterPanelProps {
   filters: ChargebackFilters;
