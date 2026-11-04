@@ -1,0 +1,2065 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Multi-ecosystem chargeback engine — allocate infrastructure costs to tenants and teams">
+      
+      
+      
+      
+        <link rel="prev" href="../api-reference/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+    
+    
+      
+        <title>Changelog - Chitragupta</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M17%2013h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10%2010%200%200%200%202%2012a10%2010%200%200%200%2010%2010%2010%2010%200%200%200%2010-10A10%2010%200%200%200%2012%202%22/%3E%3C/svg%3E');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#changelog" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Chitragupta" class="md-header__button md-logo" aria-label="Chitragupta" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Chitragupta
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Changelog
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/waliaabhishek/chitragupta" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    chitragupta
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Chitragupta" class="md-nav__button md-logo" aria-label="Chitragupta" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Chitragupta
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/waliaabhishek/chitragupta" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    chitragupta
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../getting-started/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/prerequisites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prerequisites
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/demo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Demo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quickstart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/first-run/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    First Run
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../configuration/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration Reference
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Configuration Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/ccloud-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Confluent Cloud
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/self-managed-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Self-Managed Kafka
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/generic-metrics-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Generic Metrics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/advanced-scenarios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced Scenarios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../focus-mapping-preview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FOCUS Mapping Preview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../architecture/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Architecture
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/plugin-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plugin System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/data-flow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Flow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/cost-model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How Costs Work
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/identity-resolution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Identity Resolution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../operations/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operations
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Operations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operations/deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operations/monitoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monitoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operations/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operations/data-retention/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Retention
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operations/upgrading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Upgrading
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#unreleased" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        [Unreleased]
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="[Unreleased]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Added
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fixed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#unreleased" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        [Unreleased]
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="[Unreleased]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Added
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fixed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h1>
+<p>All notable changes to this project will be documented in this file.</p>
+<p>The format is based on <a href="https://keepachangelog.com/en/1.0.0/">Keep a Changelog</a>,
+and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</p>
+<h2 id="unreleased">[Unreleased]<a class="headerlink" href="#unreleased" title="Permanent link">&para;</a></h2>
+<h3 id="added">Added<a class="headerlink" href="#added" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Feat: Trustworthy self-managed Kafka cost attribution (<a href="https://github.com/waliaabhishek/chitragupta/commit/bec6c17c4cbf85700dab329b16ca20794c8c422c">bec6c17</a>)</li>
+<li>Feat: Deliver FOCUS Mapping Preview (<a href="https://github.com/waliaabhishek/chitragupta/commit/db68c64a7dc41b4c3a28ded79fefc3fb533a76ab">db68c64</a>)</li>
+<li>Feat: Cost explorer Graph and drill down (<a href="https://github.com/waliaabhishek/chitragupta/commit/84459bf75701228fb2c7799fce3267a131e80002">84459bf</a>)</li>
+<li>Feat: Change cluster and topic name filters to substring match (<a href="https://github.com/waliaabhishek/chitragupta/commit/766d5b371b236adf96d08b111d8c372277f53d93">766d5b3</a>)</li>
+<li>Feat: TASK-202 — Improve Cost Velocity chart clarity with descriptive labels, top 10, and subtitle (<a href="https://github.com/waliaabhishek/chitragupta/commit/cbec3aa46a2d4bb20b929511041c6e993e2879a1">cbec3aa</a>)</li>
+<li>Feat: TASK-201 — Redesign Attribution Method donut into confidence-framed chart (<a href="https://github.com/waliaabhishek/chitragupta/commit/0f0b735fdbd038853bd232daf049d386d1e48794">0f0b735</a>)</li>
+<li>Feat: TASK-199 — Redesign Cluster Concentration into two charts (<a href="https://github.com/waliaabhishek/chitragupta/commit/63627be298ed6cc9dbdfbb8f08fdd1c51e36d334">63627be</a>)</li>
+<li>Feat: TASK-197 — Add informative tooltip to Links toggle switch in app header (<a href="https://github.com/waliaabhishek/chitragupta/commit/1dd8e9598c38703fb2edaa42075f7f34c893fc6b">1dd8e95</a>)</li>
+<li>Feat: TASK-195 — Fix and expand Confluent Cloud console deep links (<a href="https://github.com/waliaabhishek/chitragupta/commit/f918bc54452ed302dd5961d1a9a3fe1b3bb5dbd4">f918bc5</a>)</li>
+<li>Feat: TASK-194 — Replace topic_attribution_enabled bool with rich status signal (<a href="https://github.com/waliaabhishek/chitragupta/commit/56cdece6e92624ad1a7cf0316f36e3f3993c2f60">56cdece</a>)</li>
+<li>Feat: TASK-193 — Pipeline status API defaults to lookback window when no date range provided (<a href="https://github.com/waliaabhishek/chitragupta/commit/50c2bf378becf7e6a13b2f53825d04e80eea1605">50c2bf3</a>)</li>
+<li>Feat: TASK-187 — Show topic attribution as "not configured" when feature is disabled (<a href="https://github.com/waliaabhishek/chitragupta/commit/8c96c1346b59408e01982afeeb24384cfaf0d983">8c96c13</a>)</li>
+<li>Feat: TASK-186 — Confluent Cloud console deep-link rendering (<a href="https://github.com/waliaabhishek/chitragupta/commit/7af7ae68c55455433c03db016e74684b16359c49">7af7ae6</a>)</li>
+<li>Feat: TASK-164 — Topic Attribution frontend page and pipeline status update (<a href="https://github.com/waliaabhishek/chitragupta/commit/5cd0480c4770e94bf7ea55b07b48dd0c83c38f31">5cd0480</a>)</li>
+<li>Feat: TASK-165 — Backend topic attribution overlay for CCloud Kafka (<a href="https://github.com/waliaabhishek/chitragupta/commit/e7690a90bb93a33a5bae8c9dbba84c56cba9818a">e7690a9</a>)</li>
+<li>Feat: TASK-163 — Pipeline Status page with workflow stepper visualization (<a href="https://github.com/waliaabhishek/chitragupta/commit/8d7c8940833b61cdac718b2c7b650590971d8942">8d7c894</a>)</li>
+<li>Feat: TASK-161 — Unified AG Grid table system with Ant Design theme sync and server-side filtering (<a href="https://github.com/waliaabhishek/chitragupta/commit/1d4627684c2e574c6eb516348926bc8641bcbc6f">1d46276</a>)</li>
+<li>Feat: TASK-160.02 — Frontend entity tag editor, inherited tag display, and tag-based filtering (<a href="https://github.com/waliaabhishek/chitragupta/commit/1d5f37a04af775bda1370c71666a3fbd4b3cbf91">1d5f37a</a>)</li>
+<li>Feat: TASK-160.01 — Entity-level tag system replacing dimension-level tags (<a href="https://github.com/waliaabhishek/chitragupta/commit/bd5631a6b12c0916388ea49e231a74519c36d62b">bd5631a</a>)</li>
+<li>Feat: Add help target to dev stack Makefile (<a href="https://github.com/waliaabhishek/chitragupta/commit/5e2d859e3f9fa2b383d262705e76a44135ae1b56">5e2d859</a>)</li>
+<li>Feat: Development environment for Docker based app (<a href="https://github.com/waliaabhishek/chitragupta/commit/743d90f24508dc06a9e30f9440631571debecc00">743d90f</a>)</li>
+<li>Feat: TASK-156 — Add active/deleted status breakdown to Inventory UI (<a href="https://github.com/waliaabhishek/chitragupta/commit/44f0fa2b0ae9d417bd681d04a944d8ba28dc390d">44f0fa2</a>)</li>
+<li>Feat: TASK-155 — Add TanStack Query v5 for client-side data caching (<a href="https://github.com/waliaabhishek/chitragupta/commit/e198e820e187d8ff9811ea5b5e8f67c593b58d10">e198e82</a>)</li>
+<li>Feat: TASK-154 — Implement Billing List Page with shared utility extraction (<a href="https://github.com/waliaabhishek/chitragupta/commit/0919bacd9db33ad43ee51b89d548fef9a1b27451">0919bac</a>)</li>
+<li>Feat: Treemap panel for principal costs, better line items panel (<a href="https://github.com/waliaabhishek/chitragupta/commit/ba589585e0e6db1e0e3ef70963e98f1214e2da0c">ba58958</a>)</li>
+<li>Feat(ccloud): complete plugin with OrgWide and Default handlers (chunk 2.6) (<a href="https://github.com/waliaabhishek/chitragupta/commit/0704c42bbc60e23fd8a9988131f80dc8c8dddc68">0704c42</a>)</li>
+<li>Feat(ccloud): add FlinkHandler with metrics-driven identity resolution (chunk 2.5) (<a href="https://github.com/waliaabhishek/chitragupta/commit/1cec70e57f00bac2edd298e21d09ff37ce526d0b">1cec70e</a>)</li>
+<li>Feat(ccloud): add ConnectorHandler and KsqldbHandler (chunk 2.4) (<a href="https://github.com/waliaabhishek/chitragupta/commit/67832af897abfa484792b989a6b5c032f0793cbf">67832af</a>)</li>
+<li>Feat(ccloud): add ksqlDB identity resolution helper (<a href="https://github.com/waliaabhishek/chitragupta/commit/05239fc5daf9c2fdb4c8cb62cc3253217823ad2d">05239fc</a>)</li>
+<li>Feat(ccloud): add connector identity resolution helper (chunk 2.4) (<a href="https://github.com/waliaabhishek/chitragupta/commit/fa71e8bcd2a330ee0bb8c8e6b732e219ccd3d8a8">fa71e8b</a>)</li>
+<li>Feat(ccloud): implement ksqlDB CSU allocator (chunk 2.4) (<a href="https://github.com/waliaabhishek/chitragupta/commit/0a9c5793cf027c20eaabdd3270841f120e50cbb8">0a9c579</a>)</li>
+<li>Feat(ccloud): add Connect allocators for chunk 2.4 (<a href="https://github.com/waliaabhishek/chitragupta/commit/5fedd9b372b9d4ee9701c2060f05226da0b9b91e">5fedd9b</a>)</li>
+<li>Feat(ccloud): implement Kafka + Schema Registry handlers (chunk 2.3) (<a href="https://github.com/waliaabhishek/chitragupta/commit/ea4570265958dfbdf6e7dbeed44d85271df2d9a8">ea45702</a>)</li>
+<li>Feat(ccloud): implement resource + identity gathering (chunk 2.2) (<a href="https://github.com/waliaabhishek/chitragupta/commit/3f08272508741a055995d2309dea6b2ffe56d11c">3f08272</a>)</li>
+<li>Feat: GAP-002+003+005+010+015+017 workflow runner + plugin metrics (<a href="https://github.com/waliaabhishek/chitragupta/commit/548e9c8e7b87229c34dc34f6ee83319358773366">548e9c8</a>)</li>
+<li>Feat(ccloud): add ConfluentCloudPlugin stub implementing EcosystemPlugin (<a href="https://github.com/waliaabhishek/chitragupta/commit/36317d64ad5d6664468013e39cb381d88e060c07">36317d6</a>)</li>
+<li>Feat(ccloud): add typed view models for Flink and Connectors (<a href="https://github.com/waliaabhishek/chitragupta/commit/3c00cc557f5555059f30f9c8255af4ae20b11245">3c00cc5</a>)</li>
+<li>Feat(ccloud): add CCloudPluginConfig with validation (<a href="https://github.com/waliaabhishek/chitragupta/commit/e234c2b3f09b58398f11a2132b83040e5a81f19b">e234c2b</a>)</li>
+<li>Feat(ccloud): add CCloudConnection.post() method (<a href="https://github.com/waliaabhishek/chitragupta/commit/89d58be207eec700521783098f73b052e974f643">89d58be</a>)</li>
+<li>Feat(ccloud): add retry logic with rate limit handling (<a href="https://github.com/waliaabhishek/chitragupta/commit/ca7d918f26b9f624613a42531d4514934a912387">ca7d918</a>)</li>
+<li>Feat(ccloud): implement CCloudConnection.get() with pagination (<a href="https://github.com/waliaabhishek/chitragupta/commit/5c42a3b61199991cb10502d877f299199b5c23b1">5c42a3b</a>)</li>
+<li>Feat(ccloud): add CCloudConnection dataclass structure (<a href="https://github.com/waliaabhishek/chitragupta/commit/c1cec4d8dea245f551caa340091609ea6a0e104e">c1cec4d</a>)</li>
+<li>Feat(ccloud): add CCloudApiError and CCloudConnectionError exceptions (<a href="https://github.com/waliaabhishek/chitragupta/commit/70a09d53e7f24e249d90bb88fdce4632b41f0701">70a09d5</a>)</li>
+</ul>
+<h3 id="changed">Changed<a class="headerlink" href="#changed" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Merge pull request #28: synthetic demo and cost period comparisons (<a href="https://github.com/waliaabhishek/chitragupta/commit/31681f1b29f66a3e4401308f3c2e8425fb94a37f">31681f1</a>)</li>
+<li>Merge branch 'main' into fix/task-268-self-managed-kafka-attribution (<a href="https://github.com/waliaabhishek/chitragupta/commit/e88f8f35e605152cd96b4559c6a045126a05503e">e88f8f3</a>)</li>
+<li>Perf: Skip disabled DEBUG context formatting (<a href="https://github.com/waliaabhishek/chitragupta/commit/a829f789806617664535fdaa7b8731af3f07be7f">a829f78</a>)</li>
+<li>Update .gitignore (<a href="https://github.com/waliaabhishek/chitragupta/commit/2333788fd13d88389ba06effaeef747706eda984">2333788</a>)</li>
+<li>Update .gitignore (<a href="https://github.com/waliaabhishek/chitragupta/commit/0d3ff0280c9064916202375a7463b2bb57f756f7">0d3ff02</a>)</li>
+<li>Tests: Bring graph explorer branch coverage from 81% to 86% (<a href="https://github.com/waliaabhishek/chitragupta/commit/c1fbafaf291b5a1ec852a00e87e97b30c94b0fc9">c1fbafa</a>)</li>
+<li>Add Grafana Topic Attribution dashboard with 17 panels (<a href="https://github.com/waliaabhishek/chitragupta/commit/056f0c8f77a36f2eb599c016eb4b8679539e0b7e">056f0c8</a>)</li>
+<li>Refactor: Standardize all tables on AG Grid, remove Ant Design Table usage (<a href="https://github.com/waliaabhishek/chitragupta/commit/5875dcd854e9283c1b297fd053a1448827ce73a4">5875dcd</a>)</li>
+<li>Refactor: Move docker commands to examples/dev/Makefile (<a href="https://github.com/waliaabhishek/chitragupta/commit/9f32cd59dcdf7400a168243552645d20972c5adf">9f32cd5</a>)</li>
+<li>Tests: Suppress 20 harmless pytest warnings via filterwarnings (<a href="https://github.com/waliaabhishek/chitragupta/commit/0191d60390cce5e467ef33931386c37e41ac811a">0191d60</a>)</li>
+<li>Docker: Add version pinning via CHITRAGUPTA_VERSION and explicit container names (<a href="https://github.com/waliaabhishek/chitragupta/commit/610c3c528f069553ca62225d4ce0e9abfd3d8663">610c3c5</a>)</li>
+<li>Rename: chitragupt → chitragupta across entire codebase (<a href="https://github.com/waliaabhishek/chitragupta/commit/1725381a929ce6cb3214b21532db6d803faad3ed">1725381</a>)</li>
+<li>Style: Move Cost Over Time panel above Cost breakdown summary section (<a href="https://github.com/waliaabhishek/chitragupta/commit/e4659a7747946c00a9ab7edad60f1e525c2af568">e4659a7</a>)</li>
+<li>Fix Grafana billing panels: query both billing and ccloud_billing tables (<a href="https://github.com/waliaabhishek/chitragupta/commit/1b1c8c6e8d7918fd8e50645e7e65cf88aa4910fa">1b1c8c6</a>)</li>
+<li>Fix Grafana dashboards: broken pie charts, missing panels, wrong column names (<a href="https://github.com/waliaabhishek/chitragupta/commit/8e493748b41be79a9f5e4d8054bd8afc6113f04b">8e49374</a>)</li>
+<li>Build multi-arch Docker images (amd64 + arm64) via QEMU (<a href="https://github.com/waliaabhishek/chitragupta/commit/2aba90cc0998ffa2961cc81cb6f512c00c742c00">2aba90c</a>)</li>
+<li>Remove local build sections from example Docker Compose files (<a href="https://github.com/waliaabhishek/chitragupta/commit/ff30ed92f9a9df0fdbf596304564da67e636f278">ff30ed9</a>)</li>
+<li>Cleanup: Remove stale configs/ and deployables/, consolidate into examples/ (<a href="https://github.com/waliaabhishek/chitragupta/commit/f776a68bb0a8a28cf712886cff0ed4886e99fed4">f776a68</a>)</li>
+<li>Maintenance: TASK-118 — Upgrade React to v19 with dependency cascade (<a href="https://github.com/waliaabhishek/chitragupta/commit/f2d2a22e513807537a3458edc3f070665b56441a">f2d2a22</a>)</li>
+<li>Maintenance: TASK-117 — Upgrade jsdom to v28 (<a href="https://github.com/waliaabhishek/chitragupta/commit/71704afc7bd2db0182f897872c94c9e8482fbe2e">71704af</a>)</li>
+<li>Maintenance: TASK-116 — Upgrade vite/vitest/plugin-react to latest majors (<a href="https://github.com/waliaabhishek/chitragupta/commit/2504728626d5fe6ca9d9e7a9014b4ece89819a51">2504728</a>)</li>
+<li>Maintenance: TASK-113 — Upgrade backend Python dependencies (<a href="https://github.com/waliaabhishek/chitragupta/commit/aa8008911f6fa0f5ada8cecc5b755af108b64d90">aa80089</a>)</li>
+<li>Cleanup: TASK-112 — Remove duplicate LOGGER definitions and dead helper functions (<a href="https://github.com/waliaabhishek/chitragupta/commit/1d28b7b8d909c0da692eb6a85ac7630bd7e2cb02">1d28b7b</a>)</li>
+<li>Add details about Log Format changing capability (<a href="https://github.com/waliaabhishek/chitragupta/commit/abdc9e2c1bdffad62e603a6604306c2d56419729">abdc9e2</a>)</li>
+<li>Other stuff (<a href="https://github.com/waliaabhishek/chitragupta/commit/0ccfbb183ea6f5154d16fcf07c2c0e75c668c3b5">0ccfbb1</a>)</li>
+<li>Fix slow shutdown: drain() now signals shutdown event before waiting (<a href="https://github.com/waliaabhishek/chitragupta/commit/d41494c8d97e110c3cdb429298ce9205ac170754">d41494c</a>)</li>
+<li>Fix pipeline run persistence and test expectations (<a href="https://github.com/waliaabhishek/chitragupta/commit/57fbef2512a3651e5af4892c8a76581b28b58af7">57fbef2</a>)</li>
+<li>Add application lifecycle layer with pipeline status tracking and readiness endpoint (<a href="https://github.com/waliaabhishek/chitragupta/commit/179921d2083cd126b2a49f61d16603e823a0de89">179921d</a>)</li>
+<li>Style: apply ruff formatting and remove unused import (<a href="https://github.com/waliaabhishek/chitragupta/commit/f9afadf52ceb61d0672efd7ae4ae8a45207aa454">f9afadf</a>)</li>
+<li>Set explicit image names in docker-compose (<a href="https://github.com/waliaabhishek/chitragupta/commit/2af5275810b54c5c24fa5cc1d410fb74296257f6">2af5275</a>)</li>
+<li>Add docker-push target for multi-arch builds (<a href="https://github.com/waliaabhishek/chitragupta/commit/a6fd7bdd104693a0b6b34f0780b9569dfc2ded4c">a6fd7bd</a>)</li>
+<li>Fix frontend TypeScript errors (<a href="https://github.com/waliaabhishek/chitragupta/commit/41044898ec5c619dff12cc92ef9ec66de0cfb94c">4104489</a>)</li>
+<li>Fix Dockerfile: copy uv from official image, fix PYTHONPATH (<a href="https://github.com/waliaabhishek/chitragupta/commit/01828e79a9b87687eea39fb4f136a3c1123522ef">01828e7</a>)</li>
+<li>Add Docker make commands for local development (<a href="https://github.com/waliaabhishek/chitragupta/commit/0766cbce2e93a4a5ba4229e1f0e6a2b8561da230">0766cbc</a>)</li>
+<li>Perf: Cut test suite runtime from 235s to 18s (<a href="https://github.com/waliaabhishek/chitragupta/commit/45209ad5dcb6189357ee45f5eda27b47565a054f">45209ad</a>)</li>
+<li>Fix dev targets: add PYTHONPATH and use npx vite (<a href="https://github.com/waliaabhishek/chitragupta/commit/3e6bd3f1d32f26597f27143a09fa857366b1ccce">3e6bd3f</a>)</li>
+<li>Add dev targets for running backend and frontend together (<a href="https://github.com/waliaabhishek/chitragupta/commit/0f9d6bdc7118fce86181a658b8545b9a1fc35c7b">0f9d6bd</a>)</li>
+<li>Add per-date progress logging during chargeback calculation (<a href="https://github.com/waliaabhishek/chitragupta/commit/a7086761aa5cf92db46088da1f8ff9f8a8094e39">a708676</a>)</li>
+<li>Fix default plugins path to point to src/plugins (<a href="https://github.com/waliaabhishek/chitragupta/commit/a9060d66df02d756245186798940cc77f77dcab3">a9060d6</a>)</li>
+<li>Fix logging disabled by alembic and CCloud API page_size error (<a href="https://github.com/waliaabhishek/chitragupta/commit/042ee8dc4965f078d825921bf3d4edf1c56b522c">042ee8d</a>)</li>
+<li>Fix broken example configs to match actual plugin schemas (<a href="https://github.com/waliaabhishek/chitragupta/commit/3337d556ca807ae0a7ea57fa03056f201319de0e">3337d55</a>)</li>
+<li>Rename project to Chitragupt, optimize Dockerfile, fix lint issues (<a href="https://github.com/waliaabhishek/chitragupta/commit/137284048cfbf8799b3cc156b1c4727ddfc6aade">1372840</a>)</li>
+<li>Add Makefile with common dev commands (<a href="https://github.com/waliaabhishek/chitragupta/commit/781cdc2cf1e446c466930c258ebe2ce9bee35144">781cdc2</a>)</li>
+<li>Ignore MkDocs build output (site/) (<a href="https://github.com/waliaabhishek/chitragupta/commit/885639dc1a2989224451d82098cdbdd1fa62480b">885639d</a>)</li>
+<li>5.1: Tech Debt Phase 2 (<a href="https://github.com/waliaabhishek/chitragupta/commit/e3ec50bd4574ac09d30de61c461803b3c0d1df0d">e3ec50b</a>)</li>
+<li>5.0: Tech Debt Cleanup (<a href="https://github.com/waliaabhishek/chitragupta/commit/36411e4b8e4eb9bb1d82c5cd2f331a6f0b7ecfe6">36411e4</a>)</li>
+<li>4.4: Tag Management + Export (<a href="https://github.com/waliaabhishek/chitragupta/commit/d4307ed02a683e0feda35758d136813b2fdb6872">d4307ed</a>)</li>
+<li>4.3: Cost Dashboards with polish (error/retry + chart toggle) (<a href="https://github.com/waliaabhishek/chitragupta/commit/ea9e647e267800879be40771e639ff2b7e4d329a">ea9e647</a>)</li>
+<li>4.2: Chargeback Explorer with AG Grid + tag editing (<a href="https://github.com/waliaabhishek/chitragupta/commit/1d395eb0bc01140f867dedf85851ff00b69510a7">1d395eb</a>)</li>
+<li>4.1: Frontend scaffold with Refine.dev + Ant Design (<a href="https://github.com/waliaabhishek/chitragupta/commit/b62930a877dd665d97fbb994a206c3437a946787">b62930a</a>)</li>
+<li>3.5: Docker deployment + CLI polish (<a href="https://github.com/waliaabhishek/chitragupta/commit/b21647af1c9e19c3068ce414c66470df2c1e8b15">b21647a</a>)</li>
+<li>3.4: Self-Managed Kafka Plugin (<a href="https://github.com/waliaabhishek/chitragupta/commit/1fe7ca0b4aba9823a95be2a260733e18e23f3719">1fe7ca0</a>)</li>
+<li>3.3: Grafana dashboards + Docker Compose (<a href="https://github.com/waliaabhishek/chitragupta/commit/b2c55fe8530a3537206d916502f2fd344e4b2e3b">b2c55fe</a>)</li>
+<li>3.2: FastAPI write endpoints + aggregation (<a href="https://github.com/waliaabhishek/chitragupta/commit/e5a9d6313835196527fb0f3679e2a4fff83d211d">e5a9d63</a>)</li>
+<li>3.1: FastAPI core + read endpoints (<a href="https://github.com/waliaabhishek/chitragupta/commit/d4e56ccad05ad9e7016570494e421ff7c71f8cbf">d4e56cc</a>)</li>
+<li>Style: ruff format (<a href="https://github.com/waliaabhishek/chitragupta/commit/5d7cb6723f3b48242cb69189b15ca3241d303e4a">5d7cb67</a>)</li>
+<li>2.1: post-implementation hardening (<a href="https://github.com/waliaabhishek/chitragupta/commit/6407c73bef5164c51ee35e57c1bbf24a0a8fca6e">6407c73</a>)</li>
+<li>Added memory folder to ignored (<a href="https://github.com/waliaabhishek/chitragupta/commit/9955398c389d83df78d3753800fa3fc24054aa37">9955398</a>)</li>
+<li>1.7: Pipeline orchestrator + workflow runner (<a href="https://github.com/waliaabhishek/chitragupta/commit/4df9dcd3c5ffbc1afa9bb616b5d439004dd0a116">4df9dcd</a>)</li>
+<li>1.6: Metrics layer — MetricsSource protocol, PrometheusMetricsSource (<a href="https://github.com/waliaabhishek/chitragupta/commit/6f1ec11123151cd21cd93bd6f4df9b07a55e30f4">6f1ec11</a>)</li>
+<li>1.5: Allocation engine — helpers, registry with overrides, dynamic loader (<a href="https://github.com/waliaabhishek/chitragupta/commit/1469986ff56e20b826bd9052966d6314062bd93a">1469986</a>)</li>
+<li>1.4: Storage layer — schema, repositories, mappers, migrations (<a href="https://github.com/waliaabhishek/chitragupta/commit/d0770dcd93df14f4492883eb476a79c7e47fcd33">d0770dc</a>)</li>
+<li>1.3: Configuration system — YAML loader, Pydantic models, env substitution (<a href="https://github.com/waliaabhishek/chitragupta/commit/5fb3b57c78d132a80ad29fe7a49816e9edd5f6de">5fb3b57</a>)</li>
+<li>1.2: Plugin protocols, registry, and loader (<a href="https://github.com/waliaabhishek/chitragupta/commit/b9e02be04f25bfffc70d121243364b4520cf7c53">b9e02be</a>)</li>
+<li>Flatten project structure to repo root (<a href="https://github.com/waliaabhishek/chitragupta/commit/906d1d1f1ea13a2253b7253be01418eafac6ba88">906d1d1</a>)</li>
+<li>1.1: Project scaffold + domain models (<a href="https://github.com/waliaabhishek/chitragupta/commit/2e97c54aa7b13cdc73934b61bf21ad06b19504ce">2e97c54</a>)</li>
+<li>Initial project setup: .gitignore (<a href="https://github.com/waliaabhishek/chitragupta/commit/5876225fd1d3356a09db299ee69b942241f7a98c">5876225</a>)</li>
+</ul>
+<h3 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Docs: Show the demo and simplify user documentation (<a href="https://github.com/waliaabhishek/chitragupta/commit/e28eab29132742ec8ab3bd760a2b839424c23c76">e28eab2</a>)</li>
+<li>Docs: Centralize FOCUS Mapping Preview guidance (<a href="https://github.com/waliaabhishek/chitragupta/commit/52c13fa052baaac2f0fd427c4e7221017a936b0b">52c13fa</a>)</li>
+<li>Docs: Clarify self-managed Kafka selector values (<a href="https://github.com/waliaabhishek/chitragupta/commit/195690857af43b3b11dfac2702ae2f3a3479c224">1956908</a>)</li>
+<li>Docs: Consolidate FOCUS Mapping Preview guidance (<a href="https://github.com/waliaabhishek/chitragupta/commit/8617f7e172fbac9488084b2d2715b328b04978a1">8617f7e</a>)</li>
+<li>Docs: Align Ruff command with canonical lint gate (<a href="https://github.com/waliaabhishek/chitragupta/commit/2062c9373f715d6ad46573b3c3f2a9765699a288">2062c93</a>)</li>
+<li>Docs: Add FOCUS Preview walkthrough (<a href="https://github.com/waliaabhishek/chitragupta/commit/9f2e62c9b9bf64aab6e7a069968d9a8fa058fc1e">9f2e62c</a>)</li>
+<li>Docs: Slim changelog template and collapse RC tags (<a href="https://github.com/waliaabhishek/chitragupta/commit/4a1ecb1a37a870c9fc0aea310921c75d2eb94e60">4a1ecb1</a>)</li>
+<li>Docs: Add TopicOverlay stage to architecture mermaid diagram (<a href="https://github.com/waliaabhishek/chitragupta/commit/70075952bebc1a9d65c85add3243ad9f978a1ea3">7007595</a>)</li>
+<li>Docs: TASK-192 — Fill topic attribution documentation gaps across repository (<a href="https://github.com/waliaabhishek/chitragupta/commit/8ab35dec57f24a90118f529bfa3adfe423e34336">8ab35de</a>)</li>
+<li>Docs: Update README.md (<a href="https://github.com/waliaabhishek/chitragupta/commit/31f3dfe87c740c5ce0d47e0f432a83dd90d30d8e">31f3dfe</a>)</li>
+<li>Docs: Add v2 migration notice and former project name to README (<a href="https://github.com/waliaabhishek/chitragupta/commit/b8a6513ff0ee79f6761aab29adfa79f1599be9d4">b8a6513</a>)</li>
+<li>Docs: Wipe CHANGELOG.md for v2 clean slate (<a href="https://github.com/waliaabhishek/chitragupta/commit/5f96c508c3c09b5de4b820cbfe07ac9a8e90bb5b">5f96c50</a>)</li>
+<li>Docs: Make Docker Compose the primary quickstart path (<a href="https://github.com/waliaabhishek/chitragupta/commit/3443ef9198b8b2bb8139a4fba00a5d0d7b647ca7">3443ef9</a>)</li>
+<li>Docs: Add configuration guide, cost model explainer, and fix doc build (<a href="https://github.com/waliaabhishek/chitragupta/commit/64c41bee4548491fbb0d132afd814fc5940af528">64c41be</a>)</li>
+<li>Docs: Add status badges to README and Codecov integration to CI (<a href="https://github.com/waliaabhishek/chitragupta/commit/c651dbda412aac7a184e29ed4624fd2d9af8e44c">c651dbd</a>)</li>
+<li>Docs: Comprehensive documentation audit and fixes across all doc areas (<a href="https://github.com/waliaabhishek/chitragupta/commit/9541b6c25ec1ac2ff8659456fec3ff8e9640c8bd">9541b6c</a>)</li>
+<li>Docs: Merge CCloud prerequisites into quickstart for single-page setup guide (<a href="https://github.com/waliaabhishek/chitragupta/commit/4d019b0a0272c5e202f22b0b6abe5f8bdef2b688">4d019b0</a>)</li>
+<li>Docs: TASK-109 — Add PostgreSQL connection string examples to config and docs (<a href="https://github.com/waliaabhishek/chitragupta/commit/038d9af96375c9b52225cca80ca0f19c58dd79ce">038d9af</a>)</li>
+<li>Docs: Add CCloud RBAC permissions and service account setup to prerequisites (<a href="https://github.com/waliaabhishek/chitragupta/commit/7e613938a3ec8560c551943214ad945165e276c9">7e61393</a>)</li>
+<li>Docs: TASK-108 — Add orchestration override examples to config examples (<a href="https://github.com/waliaabhishek/chitragupta/commit/9fb8ca47eb01d0e1dbc2a1e0b52f6a0f075a17ec">9fb8ca4</a>)</li>
+<li>Docs: TASK-105 — Add upgrade and migration guide to operations documentation (<a href="https://github.com/waliaabhishek/chitragupta/commit/388ac6a532e10214dc1cb8239cf43d283f34335f">388ac6a</a>)</li>
+<li>Docs: TASK-103 — Add CHANGELOG and release notes mechanism (<a href="https://github.com/waliaabhishek/chitragupta/commit/d9505a3e107997f647881620601b0dee06a0e1ef">d9505a3</a>)</li>
+<li>Docs: Add project name origin and extended description to README (<a href="https://github.com/waliaabhishek/chitragupta/commit/3315b47d52e511e13c60c9138caefba4acff5e24">3315b47</a>)</li>
+<li>Docs: TASK-102 — Add Docker-based quickstart guide to deployables/ (<a href="https://github.com/waliaabhishek/chitragupta/commit/72984064bb4ccf1d470d2158284f01a4a2f0d371">7298406</a>)</li>
+<li>Docs: Open external links in new tab (<a href="https://github.com/waliaabhishek/chitragupta/commit/2dc86510a73f4c43e39e064a637bce8668926d3a">2dc8651</a>)</li>
+<li>Docs: Add pipeline flow diagram to data-flow.md (<a href="https://github.com/waliaabhishek/chitragupta/commit/ba933538b70b733110114b4caa6249d98ce6dbac">ba93353</a>)</li>
+<li>Docs: Fix ccloud-reference.md to match actual implementation (<a href="https://github.com/waliaabhishek/chitragupta/commit/e87b2f544d119d022081ecd5e43dc47c989b44a7">e87b2f5</a>)</li>
+<li>Docs: Add README.md and fix mkdocs anchor slugify (<a href="https://github.com/waliaabhishek/chitragupta/commit/5a7cffc562343c9cabd9e3cb24b51d6e8ede58f7">5a7cffc</a>)</li>
+<li>Docs: TASK-029 — Comprehensive user documentation infrastructure (<a href="https://github.com/waliaabhishek/chitragupta/commit/dd21aa862d8f96d357341ee4bd2e18b551341c4e">dd21aa8</a>)</li>
+</ul>
+<h3 id="fixed">Fixed<a class="headerlink" href="#fixed" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fix: make media frame conversion consistent across FFmpeg versions (<a href="https://github.com/waliaabhishek/chitragupta/commit/8d7f10ad9a2aa84a2451f5ef57e7c76c9bcd3139">8d7f10a</a>)</li>
+<li>Fix: improve comparison summaries and resolve effective retention (<a href="https://github.com/waliaabhishek/chitragupta/commit/6bb38be684af3af32862a087e7343da8e7f6a274">6bb38be</a>)</li>
+<li>Fix: prevent link crashes and restore self-managed cost explorer (<a href="https://github.com/waliaabhishek/chitragupta/commit/444c4478f6eb95ce7509c75573ad87fe9015e296">444c447</a>)</li>
+<li>Fix: TASK-204 - FinOps — Compare cost periods and investigate the biggest changes (<a href="https://github.com/waliaabhishek/chitragupta/commit/9178d634deebf4f88c0f968ac552edbb85a7eeda">9178d63</a>)</li>
+<li>Fix: TASK-257.12 - Make the Demo UI walkthrough show a clear cost investigation (<a href="https://github.com/waliaabhishek/chitragupta/commit/bde4261e7d870ae513a085c7a6400fdb043d4b41">bde4261</a>)</li>
+<li>Fix: TASK-277 - Scale Confluent console deep-link resolution without full-catalog loading (<a href="https://github.com/waliaabhishek/chitragupta/commit/89e7e854e459062dac9ce2b5b988223df9f57704">89e7e85</a>)</li>
+<li>Fix: TASK-276 - Remove clock coupling from the Confluent chargeback metadata integration test (<a href="https://github.com/waliaabhishek/chitragupta/commit/3a28c54c9d780a0cc90c47b758fcdc4cdd0f9210">3a28c54</a>)</li>
+<li>Fix: TASK-257.11 - Restore Demo launcher integration coverage after Compose command drift (<a href="https://github.com/waliaabhishek/chitragupta/commit/aa5709b3166c0912f552ca7a12b5c0882b707dad">aa5709b</a>)</li>
+<li>Fix: TASK-257.10 - Reduce Demo media contract duplication without weakening validation (<a href="https://github.com/waliaabhishek/chitragupta/commit/d2516cb217da0301f436c20fd9353822488eb083">d2516cb</a>)</li>
+<li>Fix: TASK-257.09 - Remove unnecessary host-port bindings from Demo media capture (<a href="https://github.com/waliaabhishek/chitragupta/commit/a08a99a48519091f2c7aa319386f4a2862fcbb43">a08a99a</a>)</li>
+<li>Fix: TASK-257.08 - Centralize pinned Grafana plugins across example stacks (<a href="https://github.com/waliaabhishek/chitragupta/commit/18e863ca6bdd56dbeebbbe3c96646e4a23972dd9">18e863c</a>)</li>
+<li>Fix: TASK-257.08 - Pin Demo Grafana plugins for reproducible startup (<a href="https://github.com/waliaabhishek/chitragupta/commit/97e85c6030cd9e9e2a3b1a14b52bcd47fff9e00f">97e85c6</a>)</li>
+<li>Fix: TASK-257.07 - Reduce Demo generator integration test runtime without weakening coverage (<a href="https://github.com/waliaabhishek/chitragupta/commit/a733c072a18e58c0c2af0bd2406f3ab8b04e30f3">a733c07</a>)</li>
+<li>Fix: TASK-257.06 - Support installed GitHub CLI release fields (<a href="https://github.com/waliaabhishek/chitragupta/commit/d51aec833bc8d836a5709270815c1524bef6e70a">d51aec8</a>)</li>
+<li>Fix: TASK-257.06 - Preserve clean Demo media recapture (<a href="https://github.com/waliaabhishek/chitragupta/commit/0e01ee1342e1b55fd137bf4b99c349e5441776b4">0e01ee1</a>)</li>
+<li>Fix: TASK-257.06 - Generate, publish, and document public Demo Experience media (<a href="https://github.com/waliaabhishek/chitragupta/commit/cafcd1645d8240e9181f493be78c81cc26fc257f">cafcd16</a>)</li>
+<li>Fix: TASK-257.05 - Complete portable Demo Stack operations (<a href="https://github.com/waliaabhishek/chitragupta/commit/05a39ffe87ab1a5655b78b5ed797f1b2c8c6b47a">05a39ff</a>)</li>
+<li>Fix: TASK-257.04 - Preserve and safely reset Demo Profile state (<a href="https://github.com/waliaabhishek/chitragupta/commit/5443da5a03fc3148656e0eaa4721f17f2a636be3">5443da5</a>)</li>
+<li>Fix: TASK-257.03 - Expose the Showcase Demo Profile (<a href="https://github.com/waliaabhishek/chitragupta/commit/09e2b0e18a97066c08136e40bb67578963af5162">09e2b0e</a>)</li>
+<li>Fix: TASK-257.02 - Complete the Clean multi-ecosystem evaluator experience (<a href="https://github.com/waliaabhishek/chitragupta/commit/ced2daaa63844206fd92a1afc924d7226ce9e24d">ced2daa</a>)</li>
+<li>Fix: TASK-257.01 - Launch the Clean Confluent Cloud Demo Experience (<a href="https://github.com/waliaabhishek/chitragupta/commit/d24413f05d3fac2eedc64af3e6b59e6e43e0a092">d24413f</a>)</li>
+<li>Fix: Finally added a License (<a href="https://github.com/waliaabhishek/chitragupta/commit/490724c88ae3ed42156844c862d62459b2745f7b">490724c</a>)</li>
+<li>Fix: TASK-273 - Reject invalid self-managed Kafka cost-pool inputs (<a href="https://github.com/waliaabhishek/chitragupta/commit/3fa160d918132cecb0d6a2fdf16958303a2e92da">3fa160d</a>)</li>
+<li>Fix: TASK-268.06 - Support Prometheus metric and label aliases for self-managed Kafka (<a href="https://github.com/waliaabhishek/chitragupta/commit/37363e1be3ba7b5d4d188f2840f18c7531fe7118">37363e1</a>)</li>
+<li>Fix: TASK-268.05 - Reduce self-managed Kafka Prometheus query volume (<a href="https://github.com/waliaabhishek/chitragupta/commit/d1821797fc21b98ae38db828f8f12d3f551963ab">d182179</a>)</li>
+<li>Fix: TASK-268.04 - Implement quota-backed principal attribution for self-managed Kafka (<a href="https://github.com/waliaabhishek/chitragupta/commit/39afa3d1b625ed20590cb3727ea09bee6e64dc31">39afa3d</a>)</li>
+<li>Fix: TASK-268.04 - Implement quota-backed principal attribution for self-managed Kafka (<a href="https://github.com/waliaabhishek/chitragupta/commit/6feffbf95bb76d14fded98444f1a0a45312e9226">6feffbf</a>)</li>
+<li>Fix: TASK-268.04 - Implement quota-backed principal attribution for self-managed Kafka (<a href="https://github.com/waliaabhishek/chitragupta/commit/3f319585e872dabfa3fdfd1c8675433c6089f3d8">3f31958</a>)</li>
+<li>Fix: TASK-268.03 - Define the quota-backed principal allocation policy for self-managed Kafka (<a href="https://github.com/waliaabhishek/chitragupta/commit/bc9d83d29f9de3f51a769470af8187e7c8687468">bc9d83d</a>)</li>
+<li>Fix: TASK-268.02 - Add topic-level cost attribution for self-managed Kafka (<a href="https://github.com/waliaabhishek/chitragupta/commit/9e965dc6d0aa60de1a963c1a26ef45d9f39493b2">9e965dc</a>)</li>
+<li>Fix: TASK-268.01 - Correct the self-managed Kafka telemetry and readiness contract (<a href="https://github.com/waliaabhishek/chitragupta/commit/58912b7409a76ebbc05bae70ae1df5fb6a1cdc42">58912b7</a>)</li>
+<li>Fix: TASK-270 - Build a reproducible self-managed Kafka telemetry validation lab (<a href="https://github.com/waliaabhishek/chitragupta/commit/0c3c8c73c109ee0c735f015f5750b9f88d160757">0c3c8c7</a>)</li>
+<li>Fix: TASK-254.52 - Eliminate remaining test clock coupling before the next FOCUS release candidate (<a href="https://github.com/waliaabhishek/chitragupta/commit/d39a03af5cd5da70ee962f479bc475c8f22c415d">d39a03a</a>)</li>
+<li>Fix: update vulnerable dependencies (<a href="https://github.com/waliaabhishek/chitragupta/commit/27f263df87725cc469beca25481c756b35daf946">27f263d</a>)</li>
+<li>Fix: TASK-254.51 - Restore reliable PostgreSQL migration-chain execution (<a href="https://github.com/waliaabhishek/chitragupta/commit/b1e01e489161a033a95ed43f16dba4efa4534128">b1e01e4</a>)</li>
+<li>Fix: TASK-254.50 - Restore clean-runner frontend and cross-client CI parity (<a href="https://github.com/waliaabhishek/chitragupta/commit/ffd36a15d414f0d1dc96cdc0ae4d7f82b03089db">ffd36a1</a>)</li>
+<li>Fix: TASK-254.49 - Accept percent-encoded database URLs during Alembic migrations (<a href="https://github.com/waliaabhishek/chitragupta/commit/73065c9f24f843fb951e5105ec6ada4b2c158d3a">73065c9</a>)</li>
+<li>Fix: TASK-258 - Make operational logs sufficient for failure diagnosis (<a href="https://github.com/waliaabhishek/chitragupta/commit/f0ee28967bb0c1c97f8345bd3aaf1075992503a3">f0ee289</a>)</li>
+<li>Fix: TASK-255 - Align gather and recalculation windows for provider-driven replacement (<a href="https://github.com/waliaabhishek/chitragupta/commit/033520329d5c6f39cd3db6933a034557794ca74c">0335203</a>)</li>
+<li>Fix: TASK-254.48 - Exercise FOCUS pipeline scenarios through normal tenant runtime construction (<a href="https://github.com/waliaabhishek/chitragupta/commit/c34c49afd51dc7b30489b04cad3b656e1d99074a">c34c49a</a>)</li>
+<li>Fix: TASK-254.47 - Make remaining date-sensitive FOCUS integration scenarios time-independent (<a href="https://github.com/waliaabhishek/chitragupta/commit/cb918ac00ba3bcf524d902e8e23886a7c9ae8280">cb918ac</a>)</li>
+<li>Fix: TASK-254.46 - Populate FOCUS contracted unit prices for eligible PAYG usage (<a href="https://github.com/waliaabhishek/chitragupta/commit/84d6ee46bdea99218535d96d0ba23e483dd0c389">84d6ee4</a>)</li>
+<li>Fix: TASK-254.45 - Deliver interoperable FOCUS metadata without false conformance claims (<a href="https://github.com/waliaabhishek/chitragupta/commit/d9045f62c34c0ad53776b31df424879d7821f45a">d9045f6</a>)</li>
+<li>Fix: TASK-254.44 - Populate mandatory FOCUS InvoiceIssuerName for direct-billed Confluent scopes (<a href="https://github.com/waliaabhishek/chitragupta/commit/d31e61341f9a6449d5b690443867065f3ba77ba9">d31e613</a>)</li>
+<li>Fix: TASK-254.43 - Populate mandatory FOCUS BillingCurrency from the eligible billing scope (<a href="https://github.com/waliaabhishek/chitragupta/commit/b6769eae6804d1cbb757252dbc4d50f4947a01ec">b6769ea</a>)</li>
+<li>Fix: TASK-254.42 - Make the one-day FOCUS repair overlay integration test time-independent (<a href="https://github.com/waliaabhishek/chitragupta/commit/23ae28e9c9e49d4cc6ca1b5b38ba7745c099e254">23ae28e</a>)</li>
+<li>Fix: TASK-254.41 - Prove FOCUS retention through normal tenant runtime construction (<a href="https://github.com/waliaabhishek/chitragupta/commit/b5887ee20e8210eb32b85d01ecc7175472310091">b5887ee</a>)</li>
+<li>Fix: TASK-254.40 - Expose FOCUS retention cleanup failures through tenant readiness (<a href="https://github.com/waliaabhishek/chitragupta/commit/bb04a34957f6a6433a9bf46f5d4ca82b8ec50a59">bb04a34</a>)</li>
+<li>Fix: TASK-254.39 - Align FOCUS RC and reviewer Ruff quality gates (<a href="https://github.com/waliaabhishek/chitragupta/commit/e250e8d9cd1824a4a924377b7cf49e3ff06e5c38">e250e8d</a>)</li>
+<li>Fix: TASK-254.38 - Make topic-attribution retention tests failure-visible (<a href="https://github.com/waliaabhishek/chitragupta/commit/e5c39c968f76f3dc6ce62206b27b3a882b818608">e5c39c9</a>)</li>
+<li>Fix: TASK-254.37 - Make the overlay retention mock contract complete and failure-visible (<a href="https://github.com/waliaabhishek/chitragupta/commit/86ba4c3439d2d452d6b1106a58c8ff58112b7fe5">86ba4c3</a>)</li>
+<li>Fix: TASK-254.36 - Isolate overlay tests from working-directory SQLite artifacts (<a href="https://github.com/waliaabhishek/chitragupta/commit/2ca9ad6512e5e3f72e5b63b9e80cf5de8d2207dd">2ca9ad6</a>)</li>
+<li>Fix: TASK-254.35 - Make the overlay retention regression test behaviorally valid and isolated (<a href="https://github.com/waliaabhishek/chitragupta/commit/85ddc6fc87588f668f62b7de21177fbac9aa09bc">85ddc6f</a>)</li>
+<li>Fix: TASK-254.34 - Pin FOCUS repair API contract tests to a deterministic UTC clock (<a href="https://github.com/waliaabhishek/chitragupta/commit/5f891b4e36004c52d8761c87cb82479d1849737d">5f891b4</a>)</li>
+<li>Fix: TASK-254.33 - Make the FOCUS Preview effective end date optional and deterministic (<a href="https://github.com/waliaabhishek/chitragupta/commit/84297e863fede287175193e1aebf729c54812774">84297e8</a>)</li>
+<li>Fix: TASK-254.32 - Eliminate the topic-attribution SQLite ResourceWarning (<a href="https://github.com/waliaabhishek/chitragupta/commit/19bf81679a09e5d8d20d0922d9e3bbe63e403ecb">19bf816</a>)</li>
+<li>Fix: TASK-254.31 - Keep FOCUS Preview available for unknown Confluent usage line types (<a href="https://github.com/waliaabhishek/chitragupta/commit/265a8e9bb92fe24bab4880683fdc626a3e67d057">265a8e9</a>)</li>
+<li>Fix: TASK-254.30 - Close FOCUS Preview spool SQLite connections deterministically (<a href="https://github.com/waliaabhishek/chitragupta/commit/c3a493702c6915b8b915444a7a18f4f290c0a4cc">c3a4937</a>)</li>
+<li>Fix: TASK-254.29 - Preserve FOCUS repair application errors after backend acquisition (<a href="https://github.com/waliaabhishek/chitragupta/commit/d7c7c6b00a1f9584992296fac1cd689684fd472b">d7c7c6b</a>)</li>
+<li>Fix: TASK-254.28 - Validate unallocated FOCUS rows cannot carry allocated names or tags (<a href="https://github.com/waliaabhishek/chitragupta/commit/8901a65983e876d8c340cb7f0ac8d1cffda522f7">8901a65</a>)</li>
+<li>Fix: TASK-254.27 - Replace FOCUS repair-conflict message matching with a typed exception (<a href="https://github.com/waliaabhishek/chitragupta/commit/1ac8258dfd2797b86401413db344d1d2cb624d88">1ac8258</a>)</li>
+<li>Fix: TASK-254.26 - Declare the FOCUS target and conformance contract across API UI and CLI surfaces (<a href="https://github.com/waliaabhishek/chitragupta/commit/a1dfc6eeeaf3adad19fac99376f35f2d9cc80196">a1dfc6e</a>)</li>
+<li>Fix: Resolve TASK-254.25 deferred test failures (<a href="https://github.com/waliaabhishek/chitragupta/commit/928d0b5d23006ec2b2eb0d74fbaaba9480e4c01a">928d0b5</a>)</li>
+<li>Fix: TASK-254.25 - Populate FOCUS consumed quantity and unit for metered Confluent usage (<a href="https://github.com/waliaabhishek/chitragupta/commit/573d1a3667ea0095d7523e2e15a2c1c7a7438f59">573d1a3</a>)</li>
+<li>Fix: TASK-254.24 - Preserve tiered Confluent Cost records through FOCUS Preview projection (<a href="https://github.com/waliaabhishek/chitragupta/commit/df34001614fadabe90bb1fda13c9ec4c6e1ce1f7">df34001</a>)</li>
+<li>Fix: TASK-254.24 - Preserve tiered Confluent Cost records through FOCUS Preview projection (<a href="https://github.com/waliaabhishek/chitragupta/commit/617f42ad4de82b4f31cdbb3ad620149b4789b49b">617f42a</a>)</li>
+<li>Fix: TASK-254.23 - Preserve accurate FOCUS Preview failure classification after backend acquisition (<a href="https://github.com/waliaabhishek/chitragupta/commit/7ef869a9ef957e86ff8442d1f845a3ca140edc89">7ef869a</a>)</li>
+<li>Fix: TASK-254.22 - Replace Preview metadata message matching with a typed persistence exception (<a href="https://github.com/waliaabhishek/chitragupta/commit/fc51bf7cc0d0f5910261bfa2954d7ced0804cb1a">fc51bf7</a>)</li>
+<li>Fix: TASK-254.21 - Normalize the unreleased FOCUS contract to its first release version (<a href="https://github.com/waliaabhishek/chitragupta/commit/2c7ee2fd73d60e6fe0bc58afb67126019b3d9af5">2c7ee2f</a>)</li>
+<li>Fix: TASK-254.20 - Serve canonical FOCUS known gaps to the pre-submission UI (<a href="https://github.com/waliaabhishek/chitragupta/commit/8b049fc4cc362ac95c216303dc51dc5232391075">8b049fc</a>)</li>
+<li>Fix: TASK-254.19 - Expose bounded FOCUS Preview upgrade readiness and repair progress (<a href="https://github.com/waliaabhishek/chitragupta/commit/a3fe5feaa9030bced9c8be89e320697eaaaf7167">a3fe5fe</a>)</li>
+<li>Fix: TASK-254.18 - Canonicalize persisted timestamps and remove fabricated Preview microsecond ordering (<a href="https://github.com/waliaabhishek/chitragupta/commit/a2b2f39b1bea05c677f01e89c09e78d2688b87a2">a2b2f39</a>)</li>
+<li>Fix: TASK-254.17 - Make FOCUS manifest gaps stable and free of internal metadata (<a href="https://github.com/waliaabhishek/chitragupta/commit/90cea1b55ddf66a68ce86e2be4f66932ba096cb0">90cea1b</a>)</li>
+<li>Fix: TASK-254.16 - Bound FOCUS Preview queueing and package memory (<a href="https://github.com/waliaabhishek/chitragupta/commit/eec1707bccd41d25fe2ec2b31b93940f0e8baa3a">eec1707</a>)</li>
+<li>Fix: TASK-254.15 - Bound FOCUS evidence and artifact lifecycle (<a href="https://github.com/waliaabhishek/chitragupta/commit/c98b3074e963539f6aed8cf24dc5edbaa4885395">c98b307</a>)</li>
+<li>Fix: TASK-254.14 - Make retained pre-FOCUS calculations Preview-ready through explicit repair (<a href="https://github.com/waliaabhishek/chitragupta/commit/7949bf868f9facb0c8fa1b71785db755fa07ac36">7949bf8</a>)</li>
+<li>Fix: TASK-254.13 - Publish automatic FOCUS revisions only after monthly settlement (<a href="https://github.com/waliaabhishek/chitragupta/commit/4c92e53f811630ce4b0d6ec97cc0b9532b534529">4c92e53</a>)</li>
+<li>Fix: TASK-254.12 - Preserve non-FOCUS runtime behavior when Mapping Preview is disabled (<a href="https://github.com/waliaabhishek/chitragupta/commit/2b778d5861d3da882e25bbf02d0e8285e3938a0b">2b778d5</a>)</li>
+<li>Fix: TASK-254.11 - Remove internal task identifiers from FOCUS Preview UI (<a href="https://github.com/waliaabhishek/chitragupta/commit/21a96f8aedf6323fab31cb48002db7f15d7b3211">21a96f8</a>)</li>
+<li>Fix: TASK-254.10 - Harden preview deployment boundaries and cross-client parity (<a href="https://github.com/waliaabhishek/chitragupta/commit/f1e8cef7723a224e7553a63d34f81b367d5b9f68">f1e8cef</a>)</li>
+<li>Fix: TASK-254.09 - Expose revision history and enforce retention (<a href="https://github.com/waliaabhishek/chitragupta/commit/a26de2aa6e3a4672618f85bda531e69f87070033">a26de2a</a>)</li>
+<li>Fix: TASK-254.08 - Publish monthly replacement revisions (<a href="https://github.com/waliaabhishek/chitragupta/commit/8395a807d53d1be68649b8c3d71a025dc891d881">8395a80</a>)</li>
+<li>Fix: TASK-254.07 - Make requested packages deterministic transferable and expiring (<a href="https://github.com/waliaabhishek/chitragupta/commit/0a5c615215a20fce3e3e022ca6bc7d5f32891f30">0a5c615</a>)</li>
+<li>Fix: TASK-254.06 - Add Monthly grain and selectable column profiles (<a href="https://github.com/waliaabhishek/chitragupta/commit/1321bd96f852e3c643f3f539603bd76b4b85cb11">1321bd9</a>)</li>
+<li>Fix: TASK-254.05 - Reconcile allocation lineage tags and unallocated portions (<a href="https://github.com/waliaabhishek/chitragupta/commit/04594ca437f76166bc1ffd9ab9b85b293da269cc">04594ca</a>)</li>
+<li>Fix: TASK-254.04 - Complete provider cost account and SKU mapping (<a href="https://github.com/waliaabhishek/chitragupta/commit/9673747d4c3e8b7fff5de64a6383c75474138799">9673747</a>)</li>
+<li>Fix: TASK-254.03 - Fail closed on ineligible preview scopes (<a href="https://github.com/waliaabhishek/chitragupta/commit/bc09a7a0b39f8c5115bb6343f4f965cfc63f82a4">bc09a7a</a>)</li>
+<li>Fix: TASK-254.02 - Deliver one Daily Full Preview end to end (<a href="https://github.com/waliaabhishek/chitragupta/commit/a5e8b6288c79ccd0bdc5805c014f487d7e418b17">a5e8b62</a>)</li>
+<li>Fix: TASK-254.01 - Preserve native Confluent cost evidence (<a href="https://github.com/waliaabhishek/chitragupta/commit/1c02ffba8eddc85840e5ab6c7f267df60c14a615">1c02ffb</a>)</li>
+<li>Fix: Bump pytest to 9.0.3 for CVE-2025-71176 (tmpdir handling) (<a href="https://github.com/waliaabhishek/chitragupta/commit/5410fddb84d905261144fc1fb1cb12eaea917c2a">5410fdd</a>)</li>
+<li>Fix: Pin pymdown-extensions&gt;=10.21.2 to restore docs code blocks (<a href="https://github.com/waliaabhishek/chitragupta/commit/115a6f859c7ae705be03d23db46749bd7b4be8d9">115a6f8</a>)</li>
+<li>Fix: Remove unused eslint-disable directive in useGraphNavigation (<a href="https://github.com/waliaabhishek/chitragupta/commit/4d8776df1486dd8c7b39a0ffa95967b16e94664d">4d8776d</a>)</li>
+<li>Fix: Graph explorer — tenant node 404 and focus node drift (<a href="https://github.com/waliaabhishek/chitragupta/commit/fbf6095b0b0a9972175710acd74cdf3b84a17c44">fbf6095</a>)</li>
+<li>Fix: Graph explorer — smooth transitions, Obsidian-style layout, no semicircles (<a href="https://github.com/waliaabhishek/chitragupta/commit/50420b10b91a186d7b9b8b57a9d2565267d6ac72">50420b1</a>)</li>
+<li>Fix: Graph explorer — scrubber now shows single-day cost, maxDate from chargeback data (<a href="https://github.com/waliaabhishek/chitragupta/commit/f7f5a4c74a2778cbfc61193e78a183d6201af164">f7f5a4c</a>)</li>
+<li>Fix: Graph explorer — group nodes double-count top-N, identity cost includes inactive resources (<a href="https://github.com/waliaabhishek/chitragupta/commit/27ae79e9349532beabb679771df05efa2a36abfc">27ae79e</a>)</li>
+<li>Fix: Graph explorer — swap to d3-force for live physics simulation, stop sidebar auto-collapse (<a href="https://github.com/waliaabhishek/chitragupta/commit/b9736e7878908d180dd7836dea65b7f4a5dffba7">b9736e7</a>)</li>
+<li>Fix: Graph explorer UX — tooltip overlap, node centering, icons, tag clear (<a href="https://github.com/waliaabhishek/chitragupta/commit/5165b6000d2d5437e9ae5c7c27f77c0cf8ca0504">5165b60</a>)</li>
+<li>Fix: TASK-246 — Restore defensive guard for missing resource_meta entries (<a href="https://github.com/waliaabhishek/chitragupta/commit/ae55b5f892707c1c587c11030f76da17fbc19bc4">ae55b5f</a>)</li>
+<li>Fix: TASK-246 — Restructure cross_references from flat list to grouped, capped structure (<a href="https://github.com/waliaabhishek/chitragupta/commit/e54bd409fa9a3ead81e7b821a29d8575cd726e3b">e54bd40</a>)</li>
+<li>Fix: TASK-245 — Extend grouped views to resource and identity views (<a href="https://github.com/waliaabhishek/chitragupta/commit/151b0ddab90f553e0114dd90a9b48b8b575251cf">151b0dd</a>)</li>
+<li>Fix: TASK-244 — Frontend progressive disclosure and group node rendering (<a href="https://github.com/waliaabhishek/chitragupta/commit/6adb7e8f7c079284a6f12f9ad59308c43bc561e6">6adb7e8</a>)</li>
+<li>Fix: TASK-243 — Grouped cluster view and expand API for graph explorer (<a href="https://github.com/waliaabhishek/chitragupta/commit/9ccfb43e5701ecd2310eea67f904c741c283d952">9ccfb43</a>)</li>
+<li>Fix: TASK-223 — Four cost explorer UX bugs (<a href="https://github.com/waliaabhishek/chitragupta/commit/473b851918d38afd1be7dcb05730cbae1d4415a5">473b851</a>)</li>
+<li>Fix: TASK-223 — Tag overlay, entity search, and shareable URL state for graph explorer (<a href="https://github.com/waliaabhishek/chitragupta/commit/0044c06076fee7d3f30af47b78e441656d590db5">0044c06</a>)</li>
+<li>Fix: TASK-222 — Timeline scrubber and cost diff mode for graph explorer (<a href="https://github.com/waliaabhishek/chitragupta/commit/ff8c45a44c8679835ff1f7c647d14a93e4760295">ff8c45a</a>)</li>
+<li>Fix: TASK-221 — Resolve deferred review issues and test coverage gaps (<a href="https://github.com/waliaabhishek/chitragupta/commit/d7d9175dbe58f9473acd37bf2f6e635b40fa994e">d7d9175</a>)</li>
+<li>Fix: TASK-221 — Full-screen graph explorer with force-directed renderer (<a href="https://github.com/waliaabhishek/chitragupta/commit/9c6a7aa9ba7ead55a407cc4465905103a54a30f0">9c6a7aa</a>)</li>
+<li>Fix: TASK-220 — Graph search, diff, and timeline endpoints (<a href="https://github.com/waliaabhishek/chitragupta/commit/1192d31649cc2831414a72e19f5d63bbacf3d531">1192d31</a>)</li>
+<li>Fix: TASK-219 — Graph Data API topology endpoint with temporal filtering (<a href="https://github.com/waliaabhishek/chitragupta/commit/5533105100dfb65677a047014911bb96a0115803">5533105</a>)</li>
+<li>Fix: TASK-216 — Owner pivot panels on chargeback and topic attribution dashboards (<a href="https://github.com/waliaabhishek/chitragupta/commit/a7779eb2a0326639317be1a53c702fba485fcaab">a7779eb</a>)</li>
+<li>Fix: TASK-218 — Add tag-based WHERE filtering to topic attribution list endpoint and filter panel (<a href="https://github.com/waliaabhishek/chitragupta/commit/e5cfa8880de158000af9a7839b3671d08accaddd">e5cfa88</a>)</li>
+<li>Fix: TASK-217 — Add distinct tag keys and tag values API endpoints (<a href="https://github.com/waliaabhishek/chitragupta/commit/4b3bcf6ad2e78e8461edb7827be68a377322e1cd">4b3bcf6</a>)</li>
+<li>Fix: TASK-215 — Tag-based GROUP BY and WHERE filtering on topic attribution aggregate (<a href="https://github.com/waliaabhishek/chitragupta/commit/b180dd5248560e14406a48b87c118c80816a7d6e">b180dd5</a>)</li>
+<li>Fix: TASK-214 — Tag-based GROUP BY and WHERE filtering on chargeback aggregate (<a href="https://github.com/waliaabhishek/chitragupta/commit/4dfd1b4f77e8974df108ecb66cd203b0829a0208">4dfd1b4</a>)</li>
+<li>Fix: TASK-213 — Add resource_id column to topic_attribution_dimensions (<a href="https://github.com/waliaabhishek/chitragupta/commit/fb0bd504e84c46a39798689400ff99041086c523">fb0bd50</a>)</li>
+<li>Fix: Updating the config.yaml to config.dev.yaml and using local repo so that SQLite file is readily accessible. (<a href="https://github.com/waliaabhishek/chitragupta/commit/63a0042a3f4d3252fb2dd5fec83d82e65f331b9f">63a0042</a>)</li>
+<li>Fix: Sidebar title shows Chitragupta instead of Chargeback (<a href="https://github.com/waliaabhishek/chitragupta/commit/12b95564082e0d3e59e7273e6f9fcff838fdb442">12b9556</a>)</li>
+<li>Fix: Replace hardcoded timestamps with dynamic dates in time-windowed API tests (<a href="https://github.com/waliaabhishek/chitragupta/commit/96899fe7024d379ad5deececb19d09d29d26f387">96899fe</a>)</li>
+<li>Fix: Replace brittle instanceof Blob check with functional assertions (<a href="https://github.com/waliaabhishek/chitragupta/commit/699d0f2dd3cbd8cbb99511efdb6d130f7c81f80d">699d0f2</a>)</li>
+<li>Fix: Add frontend lint/typecheck/test/build to CI workflow (<a href="https://github.com/waliaabhishek/chitragupta/commit/283e40e814bf7985bde05f78a54ad2f218c9adb7">283e40e</a>)</li>
+<li>Fix: Sync topic attribution chart tests with post-redesign component behavior (<a href="https://github.com/waliaabhishek/chitragupta/commit/fe13d6d8103d8b00eace7a6327b84df60755f452">fe13d6d</a>)</li>
+<li>Fix: Resolve Dependabot security alerts for vite (bump 8.0.0 → 8.0.7) (<a href="https://github.com/waliaabhishek/chitragupta/commit/86a77e21d42546091591525635afbc38b0fee573">86a77e2</a>)</li>
+<li>Fix: Update documentation link in README (<a href="https://github.com/waliaabhishek/chitragupta/commit/4984367743b84da29bbb8a48249a2af42b1fcf49">4984367</a>)</li>
+<li>Fix: Resolve Dependabot security alerts for lodash, lodash-es, and pygments (<a href="https://github.com/waliaabhishek/chitragupta/commit/3ac381cf7054437648f097a96dd039ff6c4f431f">3ac381c</a>)</li>
+<li>Fix: Add node_modules/ to .gitignore (<a href="https://github.com/waliaabhishek/chitragupta/commit/ae5720517b3b5dc17bfc40bec6c41644aa6eba72">ae57205</a>)</li>
+<li>Fix: Add --frozen to uv sync in CI, release, and docs workflows (<a href="https://github.com/waliaabhishek/chitragupta/commit/e1b6965d253e603e2475b9f51b83175b54f4e359">e1b6965</a>)</li>
+<li>Fix: Redesign Environment Cost and Top Clusters charts with per-entity topic stacking (<a href="https://github.com/waliaabhishek/chitragupta/commit/ee6093cd8e1c05cbf6880bb3544ffafbb318bef3">ee6093c</a>)</li>
+<li>Fix: Add notMerge to all ECharts instances and remove misleading Attribution Confidence chart (<a href="https://github.com/waliaabhishek/chitragupta/commit/38618a01cc47f19c1002099c8fd3f5afabf496af">38618a0</a>)</li>
+<li>Fix: Environment Cost legend overflow and remove misleading Other from Top Topics (<a href="https://github.com/waliaabhishek/chitragupta/commit/a91d31fd4eb007ad8e89c256993f7aa7a9e7e652">a91d31f</a>)</li>
+<li>Fix: TASK-203 — Fix raw floating-point values in ECharts tooltips across topic attribution charts (<a href="https://github.com/waliaabhishek/chitragupta/commit/915e2b82972aba347a921ac6202a07c70397f9f3">915e2b8</a>)</li>
+<li>Fix: TASK-200 — Fix Environment Cost chart label overflow with scrollable x-axis (<a href="https://github.com/waliaabhishek/chitragupta/commit/028e09a829663a3ae325f9ab74a780b0f121aae3">028e09a</a>)</li>
+<li>Fix: TASK-198 — Fix Topic Attribution table not displaying data (AG Grid 0px height) (<a href="https://github.com/waliaabhishek/chitragupta/commit/30aa8d84e06ecabc61b86ec4de139dd28512fe08">30aa8d8</a>)</li>
+<li>Fix: TASK-196 — Disable broken Confluent Cloud deep links for connectors and identity pools (<a href="https://github.com/waliaabhishek/chitragupta/commit/16030a3b8006c72c359f6f7b291188ce5980682c">16030a3</a>)</li>
+<li>Fix: TASK-184 — Retry counters reset when dates re-enter processing queue via recalculation window (<a href="https://github.com/waliaabhishek/chitragupta/commit/727c65d34a6a4fdb2b6843ae63e7b7a56c207367">727c65d</a>)</li>
+<li>Fix: TASK-183 — Zero-topic discovery no longer leaves pipeline dates permanently stuck (<a href="https://github.com/waliaabhishek/chitragupta/commit/28a3be3e88c388cc376a6fd44f6cb2e9fc499189">28a3be3</a>)</li>
+<li>Fix: TASK-182 — Resource type filtering now mandatory on resource repository read methods (<a href="https://github.com/waliaabhishek/chitragupta/commit/322a927933a0bfd5ff1f2d505ea5c68465065082">322a927</a>)</li>
+<li>Fix: TASK-181 — Topic attribution retry cap prevents poison-pill infinite retries (<a href="https://github.com/waliaabhishek/chitragupta/commit/58e000f0a6c4f5ae068107735d05114f2b727da9">58e000f</a>)</li>
+<li>Fix: TASK-180 — Topic attribution no longer filters Prometheus metrics through resources table (<a href="https://github.com/waliaabhishek/chitragupta/commit/848484fe741c0445097620216742c73f5503d257">848484f</a>)</li>
+<li>Fix: TASK-179 — Topic attribution uses point-in-time topic membership instead of current inventory (<a href="https://github.com/waliaabhishek/chitragupta/commit/cac4fb79d11ce4ebab1d399f86007d974c7e4a78">cac4fb7</a>)</li>
+<li>Fix: TASK-178 — Recalculation window now deletes stale topic attribution facts before recompute (<a href="https://github.com/waliaabhishek/chitragupta/commit/f6b41fb99103f600d1361fb8c7445a4bf3bee173">f6b41fb</a>)</li>
+<li>Fix: TASK-177 — Transient topic-attribution failures no longer silently marked as calculated (<a href="https://github.com/waliaabhishek/chitragupta/commit/9e4455d61412c0898a9392e2921cd30757026f8d">9e4455d</a>)</li>
+<li>Fix: TASK-176 — Unify emitter plugins to be row-type-agnostic across all pipelines (<a href="https://github.com/waliaabhishek/chitragupta/commit/664fda46704e153c139e8c9fffe181ce2f96c4a5">664fda4</a>)</li>
+<li>Fix: TASK-175 — Replace getattr config probing with typed overlay config protocol (<a href="https://github.com/waliaabhishek/chitragupta/commit/05d352244fda4c9ec9541d1feed3da9de385bf8b">05d3522</a>)</li>
+<li>Fix: TASK-174 — Remove metrics_available dead code from topic attribution (<a href="https://github.com/waliaabhishek/chitragupta/commit/70de0f3b1474e114bd8b8303d3727d055e7e889c">70de0f3</a>)</li>
+<li>Fix: TASK-173 — Topic attribution export uses true streaming with iter_by_filters (<a href="https://github.com/waliaabhishek/chitragupta/commit/9a383b36ead302e541a9e331ce4325d04c92f58a">9a383b3</a>)</li>
+<li>Fix: TASK-172 — Add attribution_method label to Prometheus topic attribution gauge (<a href="https://github.com/waliaabhishek/chitragupta/commit/96cbd947e491c03b7a8fc927972f998b225f80fb">96cbd94</a>)</li>
+<li>Fix: TASK-171 — Remove server_default from topic_attribution_facts.amount column (<a href="https://github.com/waliaabhishek/chitragupta/commit/06e3fe4c8622cbeb249ce620bcc468296d17dd6d">06e3fe4</a>)</li>
+<li>Fix: TASK-170 — Topic discovery queries now respect metric_name_overrides (<a href="https://github.com/waliaabhishek/chitragupta/commit/22740d223116ade4d60d4252f8506ba6f1899315">22740d2</a>)</li>
+<li>Fix: TASK-169 — Fail config validation when topic attribution enabled without Prometheus (<a href="https://github.com/waliaabhishek/chitragupta/commit/4ecd47e1f4089fac046d2bf6a8c86caa94d5554c">4ecd47e</a>)</li>
+<li>Fix: TASK-168 — Generalize EmitterRunner for pipeline-agnostic emission tracking (<a href="https://github.com/waliaabhishek/chitragupta/commit/184590ee39ff6486d617ce1aa886feb96a5fa811">184590e</a>)</li>
+<li>Fix: TASK-167 — Remove duplicated _distribute_remainder from topic attribution models (<a href="https://github.com/waliaabhishek/chitragupta/commit/283e3b3f247f87348e730809ee67f74bf614bf1e">283e3b3</a>)</li>
+<li>Fix: TASK-166 — Fix attribution_method nullable constraint in topic attribution schema (<a href="https://github.com/waliaabhishek/chitragupta/commit/a31bb2ce721121686b30fef34b779569519465b1">a31bb2c</a>)</li>
+<li>Fix: TASK-165 — Add missing emitters, retention wiring, and pipeline status schema (<a href="https://github.com/waliaabhishek/chitragupta/commit/11ff13f99f342c949e8faee6450eaacd0bc578bc">11ff13f</a>)</li>
+<li>Fix: Resolve Dependabot alerts for path-to-regexp and brace-expansion (<a href="https://github.com/waliaabhishek/chitragupta/commit/6e3f810fc90ea581ce59a13327dfa20e29c7bad3">6e3f810</a>)</li>
+<li>Fix: Migrate AG Grid from legacy CSS to v35 JS Theme API (<a href="https://github.com/waliaabhishek/chitragupta/commit/6004d3a5f92b0f2b970e80ffda1300e986b7f844">6004d3a</a>)</li>
+<li>Fix: AG Grid theme not applying — add Alpine base class, sorting, resizing, and alternating rows (<a href="https://github.com/waliaabhishek/chitragupta/commit/49d53347971535598f3c73804b1bca99b74979df">49d5334</a>)</li>
+<li>Fix: Auto-detect docker compose v1/v2 in dev Makefile (<a href="https://github.com/waliaabhishek/chitragupta/commit/749932f19c24351abb0b5b553c0fb2539d2421d7">749932f</a>)</li>
+<li>Fix: AG Grid infinite row model stuck after aborted fetch in all grid components (<a href="https://github.com/waliaabhishek/chitragupta/commit/7ca1619887b465638942fd6fcede17f6fb0bba93">7ca1619</a>)</li>
+<li>Fix: TASK-162 — AG Grid theme with alpine base CSS, Ant Design visual parity, and test rewrites (<a href="https://github.com/waliaabhishek/chitragupta/commit/63ff14c7001b66c01b692bc7eac7c4fed2e7e6c5">63ff14c</a>)</li>
+<li>Fix: Resolve TypeScript errors in frontend tests and add tsc pre-commit hook (<a href="https://github.com/waliaabhishek/chitragupta/commit/5c3390c1e35e63b25ff190f76e7c11955024d87f">5c3390c</a>)</li>
+<li>Fix: Bump requests 2.32.5→2.33.0 and picomatch 4.0.3→4.0.4 for Dependabot alerts (<a href="https://github.com/waliaabhishek/chitragupta/commit/915e895ebb232add9388ecf2da068c02b2744fc8">915e895</a>)</li>
+<li>Fix: TASK-159 — Add timezone picker to filter panels and wire to API (<a href="https://github.com/waliaabhishek/chitragupta/commit/661270a860926004d1643749ca9a3ca1f3506d59">661270a</a>)</li>
+<li>Fix: TASK-158 — Add timezone query param to all date-filtered API endpoints (<a href="https://github.com/waliaabhishek/chitragupta/commit/3b7f03bcc0961c9a5ff7baa8d85a9c7f1a064c92">3b7f03b</a>)</li>
+<li>Fix: TASK-157 — Add timezone parameter to resolve_date_range (<a href="https://github.com/waliaabhishek/chitragupta/commit/590a0038b8e6bc034f62d82234481d41ba5778ce">590a003</a>)</li>
+<li>Fix: Remove 10k row limit on aggregate endpoint that silently truncated totals (<a href="https://github.com/waliaabhishek/chitragupta/commit/6a41bbb03514fb77b2197da432e9eea622cfe463">6a41bbb</a>)</li>
+<li>Fix: Resolve pre-existing lint errors across frontend and backend (<a href="https://github.com/waliaabhishek/chitragupta/commit/8541b0bbc7cf22bdd18685cb8b2eac795afe0fb3">8541b0b</a>)</li>
+<li>Fix: Register AG Grid modules to fix empty Chargebacks page (<a href="https://github.com/waliaabhishek/chitragupta/commit/c39e6bda957786679c876289cc579535f6a0fef8">c39e6bd</a>)</li>
+<li>Fix: TASK-153 — Aggregate tiered billing rows in CCloud gather() (<a href="https://github.com/waliaabhishek/chitragupta/commit/ccd68f592dbe158260ee308ffe58ad8f3d3dca99">ccd68f5</a>)</li>
+<li>Fix: Pre-create /app/data dir in Dockerfile for named-volume compatibility (<a href="https://github.com/waliaabhishek/chitragupta/commit/6c63236e4e5579a70a7ed5a5288d13b12128a2ba">6c63236</a>)</li>
+<li>Fix: TASK-124 — Eliminate resource cache multi-window collision in orchestrator (<a href="https://github.com/waliaabhishek/chitragupta/commit/bf9debd43062cf72f79739828a64b75a6ec689c0">bf9debd</a>)</li>
+<li>Fix: TASK-122 — Add missing context parameter to IdentityResolver protocol (<a href="https://github.com/waliaabhishek/chitragupta/commit/b3259f99a234cae6c68a3b1ff308339a4820de41">b3259f9</a>)</li>
+<li>Fix: Scope billing pipeline_state filter to billing panels only (<a href="https://github.com/waliaabhishek/chitragupta/commit/c535320c8f58795b11c881bb0851722e86edbc43">c535320</a>)</li>
+<li>Fix: Billing panels show only dates with chargeback data (<a href="https://github.com/waliaabhishek/chitragupta/commit/c41471c24f91b8e7f545500c760fb8f306452696">c41471c</a>)</li>
+<li>Fix: Cost per Resource panel — use resource_id instead of display_name (<a href="https://github.com/waliaabhishek/chitragupta/commit/7c8097dc38cd387d67f29949489f88a75f083cf6">7c8097d</a>)</li>
+<li>Fix: CCloudBillingRepository.upsert() — idempotent replace instead of accumulate (<a href="https://github.com/waliaabhishek/chitragupta/commit/83317942afb9c67cca070b6ff49a5999ccfcee6c">8331794</a>)</li>
+<li>Fix: Cost Over Time — pivoted barchart with dates on X-axis (<a href="https://github.com/waliaabhishek/chitragupta/commit/4f1a2d6a3bb169e5011da387fcdfd1062eebe262">4f1a2d6</a>)</li>
+<li>Fix: Cost Over Time panel — switch to stacked bar timeseries (<a href="https://github.com/waliaabhishek/chitragupta/commit/79a5232ded12c952c51f5e56822c638248388172">79a5232</a>)</li>
+<li>Fix: Billing environment panel — use env_id instead of r.parent_id (<a href="https://github.com/waliaabhishek/chitragupta/commit/7f6adb83fdae5e13a9a1018f1f84a681629a16e2">7f6adb8</a>)</li>
+<li>Fix: Resource pie chart — consolidate by display_name, use d.env_id for env filter (<a href="https://github.com/waliaabhishek/chitragupta/commit/773112c423163f04518fce9ba46195054388ed2a">773112c</a>)</li>
+<li>Fix: Environment pie chart — use d.env_id instead of r.parent_id (<a href="https://github.com/waliaabhishek/chitragupta/commit/0473b26945a2ae13a32993f618342916810514ab">0473b26</a>)</li>
+<li>Fix: Correct treemap plugin ID, dynamic cost-type stat panel (<a href="https://github.com/waliaabhishek/chitragupta/commit/d0c4fd4b77df9713fda238d829f37f0c0b5f2082">d0c4fd4</a>)</li>
+<li>Fix: task-147 — Fix plugin loader to actually use plugins_path for external plugin discovery (<a href="https://github.com/waliaabhishek/chitragupta/commit/5b6cdb6e4dcd0043a3ce8a26e6e4e16cf19868e1">5b6cdb6</a>)</li>
+<li>Fix: task-148 — Decouple emitters from pipeline loop, make them independent DB readers (<a href="https://github.com/waliaabhishek/chitragupta/commit/6d3fe806d3a954b23908aeffb4dce5617cee0436">6d3fe80</a>)</li>
+<li>Fix: task-146 — Remove ecosystem_name from generic_metrics_only plugin, hardcode ecosystem like CCloud/SMK (<a href="https://github.com/waliaabhishek/chitragupta/commit/20f37d077f45052dfedbfa8a1c49d7a7157e8d9d">20f37d0</a>)</li>
+<li>Fix: task-145 — Reject pipeline trigger in API-only mode, prevent double PipelineRun records (<a href="https://github.com/waliaabhishek/chitragupta/commit/33108e3d895bcfaf2fa19ffc1345c4fd6e12fd2b">33108e3</a>)</li>
+<li>Fix: task-144 — Convert StorageConfig.connection_string to SecretStr and mask secrets in --show-config (<a href="https://github.com/waliaabhishek/chitragupta/commit/5bfab556f2d39cad75e684f4c5c7f6f68b7365bd">5bfab55</a>)</li>
+<li>Fix: task-142 — Fix env_id in API response schema and allocation issue reporting (<a href="https://github.com/waliaabhishek/chitragupta/commit/a6084955b7afa27e55a5aba6dfca797800e3433f">a608495</a>)</li>
+<li>Fix: task-141 — Fix env_id propagation gaps in 3 code paths (<a href="https://github.com/waliaabhishek/chitragupta/commit/4cdf245ce2fa7066429451ab11f2c1c2fd7cbbb1">4cdf245</a>)</li>
+<li>Fix: task-140 — Add env_id to chargeback dimensions via plugin-extensible chargeback repository (<a href="https://github.com/waliaabhishek/chitragupta/commit/dadb7cd3f61d7ab93266f64efd58e3a0f86155ca">dadb7cd</a>)</li>
+<li>Fix: Add latest tag to chitragupt-ui Docker image on release (<a href="https://github.com/waliaabhishek/chitragupta/commit/0c2178befa937d7c64c25475234f0460ef54c611">0c2178b</a>)</li>
+<li>Fix: Update changelog test to allow git-cliff in docs workflow (<a href="https://github.com/waliaabhishek/chitragupta/commit/1a34e546f9a59334c5dfe25a25a161944c1437b3">1a34e54</a>)</li>
+<li>Fix: Use GHCR image names in example Docker Compose files (<a href="https://github.com/waliaabhishek/chitragupta/commit/22f19bf32418d9f153d803c151515e7962cba925">22f19bf</a>)</li>
+<li>Fix: Generate changelog for both dev and versioned doc deploys (<a href="https://github.com/waliaabhishek/chitragupta/commit/59ab77027811ca0865980b4300c007b1d877480e">59ab770</a>)</li>
+<li>Fix: Generate CHANGELOG.md in CI so docs changelog page has release entries (<a href="https://github.com/waliaabhishek/chitragupta/commit/7e32d536593fdb84bff16a4611aa0b8ee1067a6d">7e32d53</a>)</li>
+<li>Fix: Include all config parameters in example configs (<a href="https://github.com/waliaabhishek/chitragupta/commit/1dd78d649b1b2cdeb3a6bb4d864ebae487013482">1dd78d6</a>)</li>
+<li>Fix: Update docs to reference examples/ instead of deployables/QUICKSTART.md (<a href="https://github.com/waliaabhishek/chitragupta/commit/f6845e58d2a9ad8f827e55204d090a28866c2abc">f6845e5</a>)</li>
+<li>Fix: TASK-139 — restructure deployables into self-contained example directories (<a href="https://github.com/waliaabhishek/chitragupta/commit/23da05737b69f42371bef4e7f3c23d4cce4a8987">23da057</a>)</li>
+<li>Fix: TASK-138 — fail hard on missing CRN organization segment in Flink gathering (<a href="https://github.com/waliaabhishek/chitragupta/commit/765a2fa997a0bb2ad4021c386dd8a77814eb9c21">765a2fa</a>)</li>
+<li>Fix: Clarify tenant_id is an internal partition key, not a CCloud org ID (<a href="https://github.com/waliaabhishek/chitragupta/commit/8d520f77835d8fe165241c432598b0e2634ba907">8d520f7</a>)</li>
+<li>Fix: Relax changelog test to allow CI-only releases with no section headers (<a href="https://github.com/waliaabhishek/chitragupta/commit/f3cda3c70fbf3d812344b7586780a6a5eeeb0275">f3cda3c</a>)</li>
+<li>Fix: TASK-132 — --validate flag now validates plugin-specific configs (<a href="https://github.com/waliaabhishek/chitragupta/commit/ccfae4c6b04b9e1ff9a633d1fd3462ebeba67b02">ccfae4c</a>)</li>
+<li>Fix: TASK-135 — Distinguish metrics prefetch failure from empty data in allocation pipeline (<a href="https://github.com/waliaabhishek/chitragupta/commit/d1869c7d9c950c572462840a5ebc0714b9b341f2">d1869c7</a>)</li>
+<li>Fix: Add CLI entry point and git-tag-based dynamic versioning (<a href="https://github.com/waliaabhishek/chitragupta/commit/ce7e99ceed72f9f5f051812908e2334b48796c7f">ce7e99c</a>)</li>
+<li>Fix: TASK-134 — Implement Prometheus/OpenMetrics emitter for chargeback and resource presence metrics (<a href="https://github.com/waliaabhishek/chitragupta/commit/bf36947251085c9809e56ed3f21ef4242862615e">bf36947</a>)</li>
+<li>Fix: TASK-133 — Patch double table creation in API test fixtures and use rolling timestamps (<a href="https://github.com/waliaabhishek/chitragupta/commit/0b041cd51b77ed47cd8a1824ef958ecc12abb86f">0b041cd</a>)</li>
+<li>Fix: TASK-130 — Replace hardcoded system identity exclusion with SENTINEL_IDENTITY_TYPES constant (<a href="https://github.com/waliaabhishek/chitragupta/commit/640a3f5f07e90d8a7d56fefdd6647e95d1e4af09">640a3f5</a>)</li>
+<li>Fix: TASK-125 — Validate CKU ratio sum at config parse time (<a href="https://github.com/waliaabhishek/chitragupta/commit/731fb3b254fcec7e24aea7932fd265be60b6dd21">731fb3b</a>)</li>
+<li>Fix: TASK-123 — Guard masked API key check against empty strings (<a href="https://github.com/waliaabhishek/chitragupta/commit/7c0cc9d13fff9639277f3e386ae85c5cbb4645b1">7c0cc9d</a>)</li>
+<li>Fix: TASK-121 — Stamp last_seen_at on all CCloud gathered entities (<a href="https://github.com/waliaabhishek/chitragupta/commit/72cf1e94715d49d2d9975c4dddda8d49ae80745f">72cf1e9</a>)</li>
+<li>Fix: TASK-120 — Add safety guard to remainder distribution loops (<a href="https://github.com/waliaabhishek/chitragupta/commit/4cac3ef025df8dd0f69c5e5ebe05172c7abc0de8">4cac3ef</a>)</li>
+<li>Fix: TASK-115 — Upgrade ag-grid to v35 (<a href="https://github.com/waliaabhishek/chitragupta/commit/37673522c74a6d0033bc6b5ea60bf16494943889">3767352</a>)</li>
+<li>Fix: Sync package-lock.json with package.json for CI docker build (<a href="https://github.com/waliaabhishek/chitragupta/commit/c15825c6abcb7a7695d1d8be99193e9d71a98a7b">c15825c</a>)</li>
+<li>Fix: Use --latest instead of --unreleased in git-cliff integration test (<a href="https://github.com/waliaabhishek/chitragupta/commit/4b399671431b6dc0939ddc7edc712ac27d08b732">4b39967</a>)</li>
+<li>Fix: Set mike default version in docs workflow (<a href="https://github.com/waliaabhishek/chitragupta/commit/a0a7874f91dcf3d833bf5e62ae81c611aa33e43a">a0a7874</a>)</li>
+<li>Fix: Use uv run for mike in docs workflow (<a href="https://github.com/waliaabhishek/chitragupta/commit/ec188bbdbad5b18dfdf928120af27d3f025242a4">ec188bb</a>)</li>
+<li>Fix: TASK-106 — Add CLI experience flags: --version, --validate, --show-config (<a href="https://github.com/waliaabhishek/chitragupta/commit/7ed40efd40ed58177aa034836edf05aaac54c58f">7ed40ef</a>)</li>
+<li>Fix: TASK-101 — Fix UI auto-refresh cascade, filters instability, and missing product_category dimension (<a href="https://github.com/waliaabhishek/chitragupta/commit/b78109c1d1f078aa2fca0bd33258436a1204da3c">b78109c</a>)</li>
+<li>Fix: TASK-100 — Fix date persistence, stop auto-refresh cascade, and add Refresh Data button (<a href="https://github.com/waliaabhishek/chitragupta/commit/dff7a9c6555f420d1236bc84882a4f9289e84294">dff7a9c</a>)</li>
+<li>Fix: TASK-099 — Add missing database indexes to eliminate full table scans on UI/Grafana polls (<a href="https://github.com/waliaabhishek/chitragupta/commit/90d5c9a42b8b2d81902528f6c7dfc48c1d2211d8">90d5c9a</a>)</li>
+<li>Fix: TASK-098 — Add AbortController to all fetch hooks and backend backpressure to prevent UI Connecting state (<a href="https://github.com/waliaabhishek/chitragupta/commit/38f45e2cf4c3824a101ad971b9df033772503e4f">38f45e2</a>)</li>
+<li>Fix: TASK-097 — Add dates_pending_calculation to PipelineRunResult for log disambiguation (<a href="https://github.com/waliaabhishek/chitragupta/commit/99f21af727d76cb44500236b2706b6cf2a20d633">99f21af</a>)</li>
+<li>Fix: TASK-096 — Implement read/write connection pool separation to fix frontend disconnects during pipeline execution (<a href="https://github.com/waliaabhishek/chitragupta/commit/0f6314ab2fba35d7ecf2a3a71b445f09a0427bfd">0f6314a</a>)</li>
+<li>Fix: TASK-095 — Fix SQL parameter explosion and N+1 query patterns in repository layer (<a href="https://github.com/waliaabhishek/chitragupta/commit/56ef055c5e9704d88869d6fd2c690c2044327f10">56ef055</a>)</li>
+<li>Fix: task-094 — Fix readiness endpoint and UI pipeline status across all startup modes (<a href="https://github.com/waliaabhishek/chitragupta/commit/3a20848f69df2b378459da0b8d97efd80bd8b650">3a20848</a>)</li>
+<li>Fix: task-093 — Add allocation issues diagnostic table (<a href="https://github.com/waliaabhishek/chitragupta/commit/15ff8ffed885b5a9ce217d2aac7e2a42324083ab">15ff8ff</a>)</li>
+<li>Fix: task-092 — Add object inventory counters panel to dashboard (<a href="https://github.com/waliaabhishek/chitragupta/commit/5202d8b8dbd36fd846bc7d8e2043b3b291a0a7dd">5202d8b</a>)</li>
+<li>Fix: task-091 — Add data availability timeline panel to dashboard (<a href="https://github.com/waliaabhishek/chitragupta/commit/03097a16c4708a29041122232d217511de6eee9b">03097a1</a>)</li>
+<li>Fix: task-090 — Convert filter inputs to dynamic dropdowns (<a href="https://github.com/waliaabhishek/chitragupta/commit/4fcace944658ae5380c2a8c15f7f0614147c11e3">4fcace9</a>)</li>
+<li>Fix: task-089 — Add pie charts for environment and product sub-type (<a href="https://github.com/waliaabhishek/chitragupta/commit/83644889ad8a9368be9e502ddc09dff1087dd77c">8364488</a>)</li>
+<li>Fix: task-088 — Add summary stat cards to dashboard (<a href="https://github.com/waliaabhishek/chitragupta/commit/c717ec9d6ad2869f37da70e02c2a2937487f30af">c717ec9</a>)</li>
+<li>Fix: task-087 — Add object inventory counts endpoint (<a href="https://github.com/waliaabhishek/chitragupta/commit/f05f60d6abee4263677f08c3f8a09a00dc0d7cd6">f05f60d</a>)</li>
+<li>Fix: task-086 — Add data availability endpoint (<a href="https://github.com/waliaabhishek/chitragupta/commit/f94922c5de7bd84fc48f879c0698c224d6746e4a">f94922c</a>)</li>
+<li>Fix: task-085 — Add environment_id as groupable dimension in aggregate endpoint (<a href="https://github.com/waliaabhishek/chitragupta/commit/64a8d1c658de3e8ac215b7f2ff69b92761caabdf">64a8d1c</a>)</li>
+<li>Fix: task-084 — Split usage_amount and shared_amount in aggregate endpoint (<a href="https://github.com/waliaabhishek/chitragupta/commit/a923c756697b9d9d30b094854c79a60f849132a9">a923c75</a>)</li>
+<li>Fix: task-083 — Add shutdown_check to orchestrator for clean signal propagation (<a href="https://github.com/waliaabhishek/chitragupta/commit/a95bad25a87b197963bc5f33cd646200f933f303">a95bad2</a>)</li>
+<li>Fix: date range picker resets on change due to batched setSearchParams (<a href="https://github.com/waliaabhishek/chitragupta/commit/114b63c5caed6aed8a83552155449acf254cce31">114b63c</a>)</li>
+<li>Fix: task-082 — Batch chargeback fact writes with session.add_all() (<a href="https://github.com/waliaabhishek/chitragupta/commit/4233f6276c1afb860076e1def24fc2b83715e013">4233f62</a>)</li>
+<li>Fix: task-081 — Remove max_dates_per_run cap during backfill (<a href="https://github.com/waliaabhishek/chitragupta/commit/f82bcd6db8dc45b51e91e2ebdb530025a18286df">f82bcd6</a>)</li>
+<li>Fix: task-077 — ChainModel construction-time validation (<a href="https://github.com/waliaabhishek/chitragupta/commit/074f06ca86d3874fddc71342979f2639ad28cbf4">074f06c</a>)</li>
+<li>Fix: task-076 — Remove deprecated allocation helpers (<a href="https://github.com/waliaabhishek/chitragupta/commit/d983a68b3ec1b4be8c8e5f9da8ebe746cab7ccc8">d983a68</a>)</li>
+<li>Fix: task-079 — SMK infrastructure allocation models (COMPUTE/STORAGE) (<a href="https://github.com/waliaabhishek/chitragupta/commit/e487d060d166804a5d3973f4765d26488933c878">e487d06</a>)</li>
+<li>Fix: task-080 — Generic Metrics-Only plugin composable models (<a href="https://github.com/waliaabhishek/chitragupta/commit/b0924e01e05d3f820bdff3b3a7ab312ae79913b6">b0924e0</a>)</li>
+<li>Fix: task-075 — SMK allocation models migration to composable ChainModel (<a href="https://github.com/waliaabhishek/chitragupta/commit/5ce04b030c50ca0e15e9297618eee8168476f220">5ce04b0</a>)</li>
+<li>Fix: task-074 — CCloud fallback allocator for unknown product types (<a href="https://github.com/waliaabhishek/chitragupta/commit/76c7a027dc771e5962187a69dfada3f403a8f3d1">76c7a02</a>)</li>
+<li>Fix: task-073 — CCloud Org-wide model with UNALLOCATED terminal (<a href="https://github.com/waliaabhishek/chitragupta/commit/0ef0d63d26cf16f20038f70099b37dda1ac60072">0ef0d63</a>)</li>
+<li>Fix: task-072 — CCloud Kafka CKU composition model (<a href="https://github.com/waliaabhishek/chitragupta/commit/1850eac939fef5b6cd79af216bea7ada86b283e8">1850eac</a>)</li>
+<li>Fix: task-071 — KAFKA network models migration to composable ChainModel (<a href="https://github.com/waliaabhishek/chitragupta/commit/64430675387f4b13d6fce1fada55ee24270e1e9b">6443067</a>)</li>
+<li>Fix: task-070 — FLINK_MODEL migration to composable allocation models (<a href="https://github.com/waliaabhishek/chitragupta/commit/74cf9062c81b2d2965ea71689eea26e814c68c27">74cf906</a>)</li>
+<li>Fix: task-069 — KSQLDB_MODEL migration to composable allocation models (<a href="https://github.com/waliaabhishek/chitragupta/commit/fd631904013e7c5edd556936d9a6f343619e0f9a">fd63190</a>)</li>
+<li>Fix: task-068 — CONNECTOR_MODEL migration to composable allocation models (<a href="https://github.com/waliaabhishek/chitragupta/commit/e48ad8150c0f9163d6881b9c3d34398d7b71774e">e48ad81</a>)</li>
+<li>Fix: task-067 — SR_MODEL migration for Schema Registry allocator (<a href="https://github.com/waliaabhishek/chitragupta/commit/75bf5d83ab6840b114b872a07860b8b8aeaf2242">75bf5d8</a>)</li>
+<li>Fix: task-065 — CompositionModel and DynamicCompositionModel (<a href="https://github.com/waliaabhishek/chitragupta/commit/36ca5bfa4598fe68a8cbee884fd37cf5a9c1d481">36ca5bf</a>)</li>
+<li>Fix: task-064 — ChainModel meta-model (<a href="https://github.com/waliaabhishek/chitragupta/commit/902aea65e8d754393570a08c212942e36277b06b">902aea6</a>)</li>
+<li>Fix: task-063 — TerminalModel and DirectOwnerModel primitives (<a href="https://github.com/waliaabhishek/chitragupta/commit/c80c6ebebab686566b33774d215f5c25a55ab0ae">c80c6eb</a>)</li>
+<li>Fix: task-062 — EvenSplitModel and UsageRatioModel primitives (<a href="https://github.com/waliaabhishek/chitragupta/commit/0c757dd5e6c52437308f9a72173f83ef47579a39">0c757dd</a>)</li>
+<li>Fix: task-061 — AllocationModel protocol and AllocationContext dataclass (<a href="https://github.com/waliaabhishek/chitragupta/commit/c888b6f4430ab7bd0e3c22c40adcd92f57a401d2">c888b6f</a>)</li>
+<li>Fix: task-060 — Add frontend Docker container with compose profile (<a href="https://github.com/waliaabhishek/chitragupta/commit/a192171fb9ee953ccfde6e9b6f5f7210b9aed239">a192171</a>)</li>
+<li>Fix: task-059 — Filter tenant_period fallback to OWNER_IDENTITY_TYPES (<a href="https://github.com/waliaabhishek/chitragupta/commit/91881dada011a73e8649b45aff71f2d49e3585a4">91881da</a>)</li>
+<li>Fix: task-058 — Implement graceful shutdown handling (<a href="https://github.com/waliaabhishek/chitragupta/commit/ffdcf0c3b882e4c7bfbe9d7906d3a60af8e2dc80">ffdcf0c</a>)</li>
+<li>Fix: task-057 — Fix alembic logging interference — restore root logger after migrations (<a href="https://github.com/waliaabhishek/chitragupta/commit/98cdb1e7b3a44309db85c77d3d5519036a99cc06">98cdb1e</a>)</li>
+<li>Fix: task-056 — Fix Frontend UI: Date Filter Refresh + Dark Mode Default (<a href="https://github.com/waliaabhishek/chitragupta/commit/558691b9c521b200712e237c1e6361ed6db089e6">558691b</a>)</li>
+<li>Fix: task-055 — Fix API key identity resolution in metrics_derived path (<a href="https://github.com/waliaabhishek/chitragupta/commit/01f48dc4cb8920deedcd0b96cb4512d6aea3c7b9">01f48dc</a>)</li>
+<li>Fix: task-054 — Use range query mode for Flink CFU metrics (<a href="https://github.com/waliaabhishek/chitragupta/commit/66dfa4236592119803f9f39d6ad88d1fcd723aae">66dfa42</a>)</li>
+<li>Fix: task-053 — Add per-endpoint semaphore to PrometheusMetricsSource (<a href="https://github.com/waliaabhishek/chitragupta/commit/c157fc525fce3d84f6e1d23a336f856862b1f604">c157fc5</a>)</li>
+<li>Fix: task-052 — Simplify _aggregate_rows dual-dict pattern (<a href="https://github.com/waliaabhishek/chitragupta/commit/ea3fb6f2e32076fa31bc86f90258671ae92d9240">ea3fb6f</a>)</li>
+<li>Fix: task-051 — Use range query mode for CCloud Kafka metrics (<a href="https://github.com/waliaabhishek/chitragupta/commit/ad1ace040836f583bb3fc94ef64ef600f35efc31">ad1ace0</a>)</li>
+<li>Fix: task-050 — Make discovery window configurable (<a href="https://github.com/waliaabhishek/chitragupta/commit/f39ce4ad09da19ba63e56598ea48602d9ee9edd5">f39ce4a</a>)</li>
+<li>Fix: task-049 — Cache validation query for first gather cycle (<a href="https://github.com/waliaabhishek/chitragupta/commit/56ad7ebf5b68e9c22f3920781dcfb66f95594694">56ad7eb</a>)</li>
+<li>Fix: task-048 — Add TTLCache for identity/resource repository lookups (<a href="https://github.com/waliaabhishek/chitragupta/commit/4bf32d2ff80aa5158e77dbdedfc8d98db1acac90">4bf32d2</a>)</li>
+<li>Fix: task-047 — Add metadata filtering to find_by_period for Flink (<a href="https://github.com/waliaabhishek/chitragupta/commit/e54eced14f40e1b34d9c744e2ec8d7c15aa05598">e54eced</a>)</li>
+<li>Fix: task-046 — Use correlated subquery for chargeback delete (<a href="https://github.com/waliaabhishek/chitragupta/commit/b321f587683022af230779a00cc7e1ea0e8033b4">b321f58</a>)</li>
+<li>Fix: task-045 — Cache billing_window() computation per line (<a href="https://github.com/waliaabhishek/chitragupta/commit/5e3f1af17d46f1ad2eed19a2d805725b4f9839d3">5e3f1af</a>)</li>
+<li>Fix: task-044 — Consolidate three Prometheus discovery queries into one (<a href="https://github.com/waliaabhishek/chitragupta/commit/ac8cceac02eb533382fd55783f31a75a7dbdda2f">ac8ccea</a>)</li>
+<li>Fix: task-040 — Use bulk UPDATE for pipeline state mark_* methods (<a href="https://github.com/waliaabhishek/chitragupta/commit/87df1c4387b4a7980f7c58c2e2d045ca91a2cf77">87df1c4</a>)</li>
+<li>Fix: task-037 — Pass cached identity/resource data to handlers (<a href="https://github.com/waliaabhishek/chitragupta/commit/696049d10415ee39d8e98a89e512d7b28fdcd7b1">696049d</a>)</li>
+<li>Fix: task-043 — Add count=False parameter to skip COUNT query (<a href="https://github.com/waliaabhishek/chitragupta/commit/0fbf7669d158aca92e1249daeda3bf88478db1ba">0fbf766</a>)</li>
+<li>Fix: task-042 — Add indexes on temporal columns (<a href="https://github.com/waliaabhishek/chitragupta/commit/8dedd7db5b653137688d5133d4bc547d91de5919">8dedd7d</a>)</li>
+<li>Fix: task-041 — Compute billing_windows once per calculate cycle (<a href="https://github.com/waliaabhishek/chitragupta/commit/9cf1a461a7bd22f34d530199b4512cc985f2b281">9cf1a46</a>)</li>
+<li>Fix: task-036 — Cache dimension lookups in ChargebackRepository (<a href="https://github.com/waliaabhishek/chitragupta/commit/0ffc6514ee3308d7bb21d3bf7228904d126f5969">0ffc651</a>)</li>
+<li>Fix: task-039 — Batch Prometheus queries in ConstructedCostInput (<a href="https://github.com/waliaabhishek/chitragupta/commit/5421de7831db2d194082bd9657609ef9b6edf9a0">5421de7</a>)</li>
+<li>Fix: task-038 — Parallelize Prometheus metrics prefetch loop (<a href="https://github.com/waliaabhishek/chitragupta/commit/7f2ad16653512bd5bdeabe4bacc90f7e9681f8be">7f2ad16</a>)</li>
+<li>Fix: task-035 — Remove per-entity flush from repository upserts (<a href="https://github.com/waliaabhishek/chitragupta/commit/13c43df9f1477ac7a7e397404db32d389c9bdd2e">13c43df</a>)</li>
+<li>Fix: Accumulate billing costs for duplicate PKs from CCloud API (<a href="https://github.com/waliaabhishek/chitragupta/commit/7bedfb0283fe18db0ba64a200a3256665e7b2483">7bedfb0</a>)</li>
+<li>Fix: Wire plugin storage modules into storage backend creation (<a href="https://github.com/waliaabhishek/chitragupta/commit/7ed2ef5b07840df34e6f3bc9cd84f91c664732ae">7ed2ef5</a>)</li>
+<li>Fix: task-033 — Wire up CCloudBillingLineItem in cost_input and add migration (<a href="https://github.com/waliaabhishek/chitragupta/commit/9a2140aa6db9876d27683d88d5cabfde95472572">9a2140a</a>)</li>
+<li>Fix: task-033 — Plugin-Owned Storage Architecture (<a href="https://github.com/waliaabhishek/chitragupta/commit/cdb7f0b457acfbc4d7d52d73154c695f69ea60f2">cdb7f0b</a>)</li>
+<li>Fix: task-032 — Billing table PK missing product_category (<a href="https://github.com/waliaabhishek/chitragupta/commit/a1f2456ebc84a6fc2c93264889b185e8baf2291b">a1f2456</a>)</li>
+<li>Fix: TASK-031 — Comprehensive logging to all Python modules (<a href="https://github.com/waliaabhishek/chitragupta/commit/53bd533d3cdf9e9adfcecb35b16d067244c9babf">53bd533</a>)</li>
+<li>Fix: TASK-030 — Annotated example YAML configs for all ecosystems (<a href="https://github.com/waliaabhishek/chitragupta/commit/9b193d69763ab917135b1b676d062c6e901b5a91">9b193d6</a>)</li>
+<li>Fix: TASK-028 — Identity resolution full-table scans (<a href="https://github.com/waliaabhishek/chitragupta/commit/e337b9f3e87b076590dcae17af252708f0f81137">e337b9f</a>)</li>
+<li>Fix: TASK-027 — Granularity extensibility via PluginSettingsBase (<a href="https://github.com/waliaabhishek/chitragupta/commit/95a31c7dddf0814b29dafa4f24906d6eb155142f">95a31c7</a>)</li>
+<li>Fix: TASK-026 — Export streaming with iter_by_filters (<a href="https://github.com/waliaabhishek/chitragupta/commit/126e2560b3b00456263df9f83358f62f4ae67a39">126e256</a>)</li>
+<li>Fix: TASK-024 — allocate_evenly_with_fallback helper for DRY allocator chain (<a href="https://github.com/waliaabhishek/chitragupta/commit/cadfcc80c4b7715827b2e821f69a63062bed92cd">cadfcc8</a>)</li>
+<li>Fix: TASK-023 — BaseServiceHandler convenience class for DRY handler boilerplate (<a href="https://github.com/waliaabhishek/chitragupta/commit/4afaae2fc00bd38da0d86daa016ad90b689ce121">4afaae2</a>)</li>
+<li>Fix: TASK-021 — resolve_date_range helper for DRY date conversion (<a href="https://github.com/waliaabhishek/chitragupta/commit/be4292ee3fce1fa5adaa4670caecbd5da26fc9ec">be4292e</a>)</li>
+<li>Fix: TASK-020 — Retention cleanup reuses cached TenantRuntime storage (<a href="https://github.com/waliaabhishek/chitragupta/commit/d6b3fec119064580f3a282c1a1e12f24018c9ad9">d6b3fec</a>)</li>
+<li>Fix: TASK-009 — GenericMetricsOnlyPlugin for YAML-only ecosystems (<a href="https://github.com/waliaabhishek/chitragupta/commit/93ac9f2a213ecfbbf68c16931bfcd03a64db17a0">93ac9f2</a>)</li>
+<li>Fix: TASK-025 — Global exception handler for FastAPI (<a href="https://github.com/waliaabhishek/chitragupta/commit/0e2b9f418b040dc0509ced241e4c7e65a9b6ac06">0e2b9f4</a>)</li>
+<li>Fix: TASK-002 — Add Emitter protocol and CSV implementation (<a href="https://github.com/waliaabhishek/chitragupta/commit/c3e79d841e5b27949d247e753126b905bcdb94fc">c3e79d8</a>)</li>
+<li>Fix: TASK-022 — Extract temporal query validation helper (<a href="https://github.com/waliaabhishek/chitragupta/commit/efaa224de77e48485995a1bcf6f3240fbf667e5a">efaa224</a>)</li>
+<li>Fix: TASK-008 — Two-phase handler gather (LSP/DIP fix) (<a href="https://github.com/waliaabhishek/chitragupta/commit/1f7b04a4ee4297008c9b16eb9e35537b4bad6c19">1f7b04a</a>)</li>
+<li>Fix: TASK-006 — Decompose orchestrator god class into phases (<a href="https://github.com/waliaabhishek/chitragupta/commit/8ba43a574316a065f4902e3083dbad47fd2f6afa">8ba43a5</a>)</li>
+<li>Fix: TASK-014 — Plugin path configurable via AppSettings (<a href="https://github.com/waliaabhishek/chitragupta/commit/d31ef1ab9070c5f575a5fe1edd59273ce7d06606">d31ef1a</a>)</li>
+<li>Fix: TASK-013 — Centralize metrics step configuration (<a href="https://github.com/waliaabhishek/chitragupta/commit/f9b51f3269944042f8dc68cc89c7f5d52ea7e4ed">f9b51f3</a>)</li>
+<li>Fix: TASK-007 — Storage Backend Registry (<a href="https://github.com/waliaabhishek/chitragupta/commit/ae63f5cd8f6700c6f6ea6ff83fc15760df448fc1">ae63f5c</a>)</li>
+<li>Fix: TASK-019 — Eliminate DRY violation in _load_identity_resolver (<a href="https://github.com/waliaabhishek/chitragupta/commit/f6ff831af8ac4562cdff6c2f9015669310f62a61">f6ff831</a>)</li>
+<li>Fix: TASK-018 — Extract _detect_entity_deletions to eliminate DRY violation (<a href="https://github.com/waliaabhishek/chitragupta/commit/c47707e9fe45f6a13325ccdd9a42f4e2eb157de8">c47707e</a>)</li>
+<li>Fix: TASK-017 — Remove unused connection/config params from OrgWideCostHandler and DefaultHandler (<a href="https://github.com/waliaabhishek/chitragupta/commit/bd7a3e6796a18e85b244e3316973be54ef4daba5">bd7a3e6</a>)</li>
+<li>Fix: TASK-016 — Extract shared MetricsConnectionConfig and create_metrics_source factory (<a href="https://github.com/waliaabhishek/chitragupta/commit/0a3e19f7a97e0c83daa1c3bb7178161508c74dea">0a3e19f</a>)</li>
+<li>Fix: TASK-015 — Standardize API routes on utc_today() instead of date.today() (<a href="https://github.com/waliaabhishek/chitragupta/commit/b79d4a0d268613c8485c96f530e3e51492ea95ec">b79d4a0</a>)</li>
+<li>Fix: TASK-012 — Add close() to EcosystemPlugin/MetricsSource protocols, remove hasattr duck-typing (<a href="https://github.com/waliaabhishek/chitragupta/commit/159615792cd52c4159b9096c695378cfffe4eda9">1596157</a>)</li>
+<li>Fix: TASK-011 — Move CCloud-specific enums out of core AllocationDetail (<a href="https://github.com/waliaabhishek/chitragupta/commit/d9c1aa72f5f463b38a7d65d3dc1abdb7f7301863">d9c1aa7</a>)</li>
+<li>Fix: TASK-010 — Validate plugin_settings at config load via PluginSettingsBase (<a href="https://github.com/waliaabhishek/chitragupta/commit/f4481e5ada72c5ad267487fc87bfd677df800b2b">f4481e5</a>)</li>
+<li>Fix: TASK-004 — Replace sys.exit(1) with tenant suspension in WorkflowRunner (<a href="https://github.com/waliaabhishek/chitragupta/commit/de324538ccbef99674ff01870b305a499197774b">de32453</a>)</li>
+<li>Fix: TASK-003 — Plugin discovery contract now works for both plugins (<a href="https://github.com/waliaabhishek/chitragupta/commit/f56708c567a4f5ae4a9713d9ae4d27c767340468">f56708c</a>)</li>
+<li>Fix: TASK-005 — Single shared WorkflowRunner in both mode + per-tenant run guard (<a href="https://github.com/waliaabhishek/chitragupta/commit/b3f2df02dfa5ede976d76ddeae228175634a1d66">b3f2df0</a>)</li>
+<li>Fix: TASK-001 — Flink fallback statement filter now uses is_stopped boolean (<a href="https://github.com/waliaabhishek/chitragupta/commit/92f7d0e13b430af539cfd5fd95d25896fdd0c53c">92f7d0e</a>)</li>
+<li>Fix: GAP-25 — Add X-RateLimit-Reset header support for rate limit handling (<a href="https://github.com/waliaabhishek/chitragupta/commit/6c8db03fa4b845e929e82ce304107a80b203bd89">6c8db03</a>)</li>
+<li>Fix: GAP-24 — Connector fallback now uses resource-local instead of tenant-period (<a href="https://github.com/waliaabhishek/chitragupta/commit/2c64a25c5a1fc533f73346b2bc05a0f3e54a446b">2c64a25</a>)</li>
+<li>Fix: GAP-23 — Filter system identities from tenant-period cache (<a href="https://github.com/waliaabhishek/chitragupta/commit/e82cf4a26b9c82b072866134bab29e3bd38d0226">e82cf4a</a>)</li>
+<li>Fix: GAP-22 — Decimal split helpers can crash on non-0.0001 amounts (<a href="https://github.com/waliaabhishek/chitragupta/commit/b3072c2bdb0934a8f050ba093d578e8905c6fb7b">b3072c2</a>)</li>
+<li>Fix: GAP-21 — run_tenant() bootstrap flag now properly latched (<a href="https://github.com/waliaabhishek/chitragupta/commit/e21a0b032f67cd071013dd33c78373809ecf5806">e21a0b0</a>)</li>
+<li>Fix: GAP-20 — Allocation retry attempts now persist across transaction rollback (<a href="https://github.com/waliaabhishek/chitragupta/commit/824abec0c52f1d3ca04f6c5461dc490edfda8f1f">824abec</a>)</li>
+<li>Fix: GAP-19 — Flink query uses shared resource-filter injection contract (<a href="https://github.com/waliaabhishek/chitragupta/commit/effd4f00d34608928c028665613dc2dfe5e7901b">effd4f0</a>)</li>
+<li>Fix: GAP-18 — Metrics query instant vs range mode support (<a href="https://github.com/waliaabhishek/chitragupta/commit/0e8b8934b9e563d499d450c811cf29470a057c89">0e8b893</a>)</li>
+<li>Fix: GAP-17 — Malformed billing handling can drop or collide costs (<a href="https://github.com/waliaabhishek/chitragupta/commit/3cf649e4150da777e304f71a9b3c56f4d0b8cdee">3cf649e</a>)</li>
+<li>Fix: GAP-16 — Flink CFU metric name fallback support (<a href="https://github.com/waliaabhishek/chitragupta/commit/065ae3b52fe879cfd8ba3e5290276470b36d2f94">065ae3b</a>)</li>
+<li>Fix: GAP-15 — ksqlDB owner resolution reads wrong field (<a href="https://github.com/waliaabhishek/chitragupta/commit/16c2d7b8b68e0c26a04807061e440793d80c460c">16c2d7b</a>)</li>
+<li>Fix: GAP-14 — Kafka network direction-specific allocation (<a href="https://github.com/waliaabhishek/chitragupta/commit/bb01c4452eb21276dee2d86f4d0d05e5dccb19e3">bb01c44</a>)</li>
+<li>Fix: GAP-13 — Self-managed Kafka correctness issues (<a href="https://github.com/waliaabhishek/chitragupta/commit/aed2c840a87a4f183b26c33a0c17461fbddad773">aed2c84</a>)</li>
+<li>Fix: GAP-12 — Connector auth mode fallback probing + masked key detection (<a href="https://github.com/waliaabhishek/chitragupta/commit/cefd31d9cb2f1abcfcf4d45f14a780e3cebdbcc9">cefd31d</a>)</li>
+<li>Fix: GAP-11 — ksqlDB allocator fallback cost type semantics (<a href="https://github.com/waliaabhishek/chitragupta/commit/3f56de21b0cecab7f328cfd2989703d3569b8308">3f56de2</a>)</li>
+<li>Fix: GAP-10 — Identity pool gathering and org-wide allocator deduplication (<a href="https://github.com/waliaabhishek/chitragupta/commit/94083c519e075632a49faabb2c257e8fc8d712a4">94083c5</a>)</li>
+<li>Fix: GAP-09 — Flink no-metrics fallback for cost attribution (<a href="https://github.com/waliaabhishek/chitragupta/commit/e32f37ee35b24e7193ffbdc5fe5e476169272d9a">e32f37e</a>)</li>
+<li>Fix: GAP-08 — Add missing CUSTOM_CONNECT product types (<a href="https://github.com/waliaabhishek/chitragupta/commit/f935d05f5da44c0949c1555916733ae072f061f8">f935d05</a>)</li>
+<li>Fix: GAP-07 — Per-date resource lookup cache (<a href="https://github.com/waliaabhishek/chitragupta/commit/f9c8cf037cfc2d8a63cbc9985b97fbc3552090fa">f9c8cf0</a>)</li>
+<li>Fix: GAP-06 — Prometheus cache TTL alignment with LRU eviction (<a href="https://github.com/waliaabhishek/chitragupta/commit/550c23944532e2cfb64637de81f9821ca5fe919c">550c239</a>)</li>
+<li>Fix: GAP-05 — Per-endpoint page size tuning for CCloud API (<a href="https://github.com/waliaabhishek/chitragupta/commit/ce864f2b24158beb9922fe4f3df2d529dd03405d">ce864f2</a>)</li>
+<li>Fix: GAP-03 test logging pollution from alembic (<a href="https://github.com/waliaabhishek/chitragupta/commit/f415967fc6e1fc8f855a2394eba37d279513e51b">f415967</a>)</li>
+<li>Fix: GAP-04 — API object refresh throttle with failure escalation (<a href="https://github.com/waliaabhishek/chitragupta/commit/333304a4e84f6014847eba54fce03bed114674de">333304a</a>)</li>
+<li>Fix: GAP-03 — Billing revision detection with logging (<a href="https://github.com/waliaabhishek/chitragupta/commit/1359c5780be92dde11baba45886e8635d5f2fd16">1359c57</a>)</li>
+<li>Fix: GAP-02 — Default/cluster-linking allocators assign to resource_id (<a href="https://github.com/waliaabhishek/chitragupta/commit/901dae96f70f40de3739d15942e3ef08e252c54a">901dae9</a>)</li>
+<li>Fix: GAP-01 — Network allocator tiered fallback for audit granularity (<a href="https://github.com/waliaabhishek/chitragupta/commit/f2f770bd53eb6fb98de5e15d8f5c9c0ad644bf61">f2f770b</a>)</li>
+<li>Fix(ccloud): extract shared sentinel helper, fix connector identity nits (<a href="https://github.com/waliaabhishek/chitragupta/commit/a93ef4765dcf56fc59d35067fad3ec3e426c6051">a93ef47</a>)</li>
+<li>Fix(ksqldb): address nits from quality review (<a href="https://github.com/waliaabhishek/chitragupta/commit/9b337ef7bae9a1f61d7ef26efaf7e80db047217f">9b337ef</a>)</li>
+<li>Fix(kafka): correct PromQL query templates for resource filtering (<a href="https://github.com/waliaabhishek/chitragupta/commit/bf6fbb4838909729388a04740c3ba71baa95f561">bf6fbb4</a>)</li>
+<li>Fix: address review issues for chunk 2.2 (<a href="https://github.com/waliaabhishek/chitragupta/commit/e2732ad51926ae6afbc374107a743854c3d7df00">e2732ad</a>)</li>
+<li>Fix(config): reject shared connection strings across tenants (<a href="https://github.com/waliaabhishek/chitragupta/commit/5bfa66e395cfa2fcf99a7688fad503c7433923e6">5bfa66e</a>)</li>
+<li>Fix: post-review hardening round 2 (<a href="https://github.com/waliaabhishek/chitragupta/commit/b604e060a10f5657e41d839cac4e87f2a57431f7">b604e06</a>)</li>
+<li>Fix: post-review hardening (items 1,3,7) (<a href="https://github.com/waliaabhishek/chitragupta/commit/8fb4675fc5b50c38dc6b5cd75d6e3148bf9e906a">8fb4675</a>)</li>
+<li>Fix(runner): move timeout=0 comment to effective_timeout line (AR-002) (<a href="https://github.com/waliaabhishek/chitragupta/commit/ff43a7a1dd6a7d369c218141fd0751e9a01a9ce9">ff43a7a</a>)</li>
+<li>Fix(orchestrator): GAP-001+004+006 — resources_gathered per billing date, UTC reassignment, error propagation (<a href="https://github.com/waliaabhishek/chitragupta/commit/8059a18ee443b69df7f586e528fc01598f53ea77">8059a18</a>)</li>
+<li>Fix(mappers): reject naive datetimes on write path (GAP-014) (<a href="https://github.com/waliaabhishek/chitragupta/commit/22ceecc5bc0360a755baf4c60b99c7882d3e7b6d">22ceecc</a>)</li>
+<li>Fix(helpers): use UNALLOCATED fallback in allocators (GAP-013) (<a href="https://github.com/waliaabhishek/chitragupta/commit/03ddfa296f1efc12d2582aeca8613a0854f8afe9">03ddfa2</a>)</li>
+<li>Fix(loading): correct Python 2 except syntax (GAP-012) (<a href="https://github.com/waliaabhishek/chitragupta/commit/fec3bcce8f0b18659ee1e7b0e2071a68f6641822">fec3bcc</a>)</li>
+<li>Fix(ccloud): type safety and lint fixes for chunk 2.1 (<a href="https://github.com/waliaabhishek/chitragupta/commit/d1f2943159deee4188014cf567e5b4917c9ae08e">d1f2943</a>)</li>
+</ul>
+<h3 id="security">Security<a class="headerlink" href="#security" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Security: Bump flatted 3.4.1 → 3.4.2 to fix CVE-2026-33228 (<a href="https://github.com/waliaabhishek/chitragupta/commit/a54229a1174f855356f7ffac0a544cbb369482f4">a54229a</a>)</li>
+<li>Security: TASK-111 — Add .env exclusion, Dependabot, and dependency auditing (<a href="https://github.com/waliaabhishek/chitragupta/commit/ecc4b7bec18705b78ab43cef90fc1ff9f5444086">ecc4b7b</a>)</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../javascripts/external-links.js"></script>
+      
+    
+  </body>
+</html>
